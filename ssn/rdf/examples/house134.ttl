@@ -9,9 +9,12 @@
 @prefix rdfp: <https://w3id.org/rdfp/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix schema: <http://schema.org/> .
-@prefix qudt: <http://qudt.org/schema/qudt#> .
-@prefix qudt: <http://qudt.org/1.1/schema/qudt> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/data/> .
 @base  <http://example.org/> .
 
 
@@ -25,12 +28,12 @@
 	rdfs:comment "The insulation material in the roof of house #134."@en .
 
 # the window opening state is a Property.
-# SSN allows to explicitly say that <window/104#state> is a property of <window>
+# SSN allows to explicitly say that <window/104/state> is a property of <window>
 
 <window> a sosa:FeatureOfInterest ;
-	sosa:hasProperty <window/104#state> .
+	sosa:hasProperty <window/104/state> .
 
-<window/104#state> a sosa:Property ;
+<window/104/state> a sosa:Property ;
 	sosa:isActedOnBy <actuation/188> .
 
 <house/134/kitchen> a sosa:Sample, sosa:Platform ;
@@ -42,29 +45,6 @@
 <house/134/bedroom> a sosa:Sample ;
 	sosa:isSampleOf <house/134> .
 
-<AtmosphericTemperature> rdfs:subClassOf sosa:Property .
- 
-<AmbientTemperature> rdfs:subClassOf <AtmosphericTemperature> .
-
-<temperature> a sosa:Property, qudt:QuantityKind ;
-	rdfs:label "Thermodynamic Temperature"@en .
-  
-<airTemperature> a sosa:Property, sosa:Property, qudt:QuantityKind, <AmbientTemperature> ;
-	qudt:generalization <temperature> ;
-	sosa:isPropertyOf <house/134/bedroom>, <house/134/kitchen> .
- 
-<soilTemperature> a sosa:Property, qudt:QuantityKind ;
-	qudt:generalization <temperature> .
- 
-<waterTemperature> a sosa:Property, qudt:QuantityKind ;
-	qudt:generalization <temperature> .
- 
-<tapWaterTemperature> a sosa:Property, qudt:QuantityKind ;
-	qudt:generalization <waterTemperature> .
- 
-<poolWaterTemperature> a sosa:Property, qudt:QuantityKind ;
-	qudt:generalization <waterTemperature> .
-
 <nest/D1AA22A8211> a sosa:Platform ;
 	rdfs:label "3rd gen Nest Learning Thermostat D1AA22A8211"@en ;
 	rdfs:comment "Nest Thermostat in bedroom of house #134"@en ;
@@ -72,7 +52,7 @@
 
 <sensor/926> a sosa:Sensor ;
 	rdfs:label "Nest temperature sensor #1"@en ;
-	sosa:observes  <airTemperature> ;
+	sosa:observes  qk:Temperature ;
 	sosa:madeObservation <observation/235714>, <observation/235715>, <observation/235716> .
   
 <PCBBoard1> a sosa:System ;
@@ -109,7 +89,7 @@
 	rdfs:comment "Deployment of PCB Board 1 and 2 in the kitchen for the purpose of observing the temperature."@en ;
 	sosa:deployedOnPlatform <house/134/kitchen> ;
 	sosa:deployedSystem <PCBBoard1>, <PCBBoard2> ;
-	sosa:forProperty <airTemperature> .
+	sosa:forProperty qk:Temperature .
 
 <sensor/927> a sosa:Sensor ;
 	sosa:implements <summingHourlyConsumptionProcedure> .
@@ -125,7 +105,7 @@
 
 <observation/235714> a sosa:Observation ;
 	sosa:hasFeatureOfInterest <house/134/bedroom> ;
-	sosa:observedProperty <airTemperature> ;
+	sosa:observedProperty qk:Temperature ;
 	sosa:madeBySensor <sensor/926> ;
 	sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTimeStamp ;
 	sosa:phenomenonTime [
@@ -140,16 +120,18 @@
 		]
 	] .
 
-# The air temperature in the kitchen of house #134 was 23.9°C.
+# The air temperature in the kitchen of house #134 was 23.9°C
+# an hour later it had cooled one degree.
 
 <observation/235715> a sosa:Observation ;
 	sosa:resultTime "2017-11-15T14:35:13Z"^^xsd:dateTime ;
-	sosa:hasSimpleResult "23.9 DEG"^^cdt:temperature .
+	sosa:hasSimpleResult "23.9"^^unit:DEG_C .
    
 <observation/235716> a sosa:Observation ;
+	sosa:resultTime "2017-11-15T15:35:13Z"^^xsd:dateTime ;
 	sosa:hasResult [
 		a qudt:QuantityValue ;
-		qudt:hasUnit unit:DegreeCelsius ;
+		qudt:hasUnit unit:DEG_C ;
 		qudt:numericValue "22.9"^^xsd:double
 	] .
 
@@ -160,14 +142,14 @@
 	sosa:hasFeatureOfInterest <house/134/kitchen> ;
 	sosa:observedProperty <electricConsumption> ;
 	sosa:madeBySensor <sensor/927> ; 
-	sosa:hasSimpleResult "22.4 kWh"^^cdt:ucum ;
+	sosa:hasSimpleResult "22.4"^^unit:KiloW-HR ;
 	sosa:hasResult <observation/235727/result> .
 	
 # The air temperature in the kitchen of house #134 was observed by the DHT22 #4578 embedded temperature sensor.
 
 <observation/235728> a sosa:Observation ;
   sosa:hasFeatureOfInterest <house/134/kitchen> ;
-  sosa:observedProperty <airTemperature> ;
+  sosa:observedProperty qk:Temperature ;
   sosa:madeBySensor <DHT22/4578#TemperatureSensor> .
 	
 <observation/s1/5> a sosa:Observation ;
@@ -214,12 +196,12 @@
 
 <windowCloser/987> rdf:type sosa:Actuator ;
 	sosa:madeActuation <actuation/188> ;
-	sosa:forProperty <window/104#state> .
+	sosa:forProperty <window/104/state> .
 
 # Actuation #188 acted on the state of window #104 and returned 'true'.
 
 <actuation/188> a sosa:Actuation ;
-	sosa:actsOnProperty <window/104#state> ;
+	sosa:actsOnProperty <window/104/state> ;
 	sosa:actuationMadeBy <windowCloser/987> ;
 	sosa:hasFeatureOfInterest  <window/104> ;
 	sosa:resultTime "2017-04-18T17:24:00+02:00"^^xsd:dateTimeStamp ;
