@@ -51,6 +51,7 @@
 # observed by Sensor #926
 
 <apartment/134/electricConsumption> rdf:type sosa:Property ;
+  sosa:isPropertyOf <apartment/134> ;
   sosa:isObservedBy <sensor/926>  .
 
 

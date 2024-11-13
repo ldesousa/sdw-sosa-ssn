@@ -3,11 +3,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#>.
+@prefix unit: <http://qudt.org/vocab/unit/> .
 
-@base <http://example.org/data/> .
+@base <http://example.org/sosa/data/> .
 
- <COPR> a sosa:FeatureOfInterest ;
+ <COPR> a sosa:FeatureOfInterest ; 
    sosa:hasSample <COPR_Station_Location> ;
    rdfs:comment "Coal Oil Point Reserve: UC Santa Barbara Natural Reserve System"@en ;
    rdfs:label "Coal Oil Point Reserve"@en .
@@ -45,7 +45,7 @@
    rdfs:label "Relative humidity, AVG, 15min, COPR, 06.02.2017, 3:00 PM"@en ;
    sosa:madeBySensor <HUMICAP-H> ;
    sosa:hasFeatureOfInterest <COPR_Station_Location> ;
-   sosa:hasSimpleResult "92.5 %"^^cdt:ucum ;
+   sosa:hasSimpleResult "92.5"^^unit:PERCENT ;
    sosa:resultTime "2017-06-02-T03:00:00-7:00"^^xsd:dateTime ;
    sosa:observedProperty <RelativeHumidity> ;
    sosa:usedProcedure <MeasuringRelativeHumidityA23> .

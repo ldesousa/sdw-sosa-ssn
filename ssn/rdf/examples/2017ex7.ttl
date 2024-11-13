@@ -5,14 +5,14 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 ex:TemperatureSensor a owl:Class ;
-  rdfs:subClassOf sosa:System .
+  rdfs:subClassOf sosa:Sensor .
 
-<TemperatureSensor/1> a ex:TemperatureSensor , sosa:System .
+<TemperatureSensor/1> a ex:TemperatureSensor , sosa:Sensor .
 
 <Observation/1> a sosa:Observation ;
   sosa:madeBySensor <TemperatureSensor/1> .
 
-<TemperatureSensor/2> a ex:TemperatureSensor , sosa:System .
+<TemperatureSensor/2> a ex:TemperatureSensor , sosa:Sensor .
 
 <Observation/2> a sosa:Observation ;
   sosa:madeBySensor <TemperatureSensor/2> .
