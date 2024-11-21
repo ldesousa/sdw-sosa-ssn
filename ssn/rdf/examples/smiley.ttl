@@ -1,0 +1,67 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.org/data/> .
+
+# Determing the color of a smiley face sticker, including sampling from a population of smiley stickers
+
+# First setting up all the basics: FeatureOfInterest, Property, Procedure, Sensor, Platform
+
+<SmileySticker>  rdf:type	sosa:FeatureOfInterest ;
+  rdfs:label "Smiley face sticker"@en ;
+  sosa:hasProperty <stickerColor> .
+ 
+<StickerColor>  rdf:type	sosa:Property;
+  rdfs:label "The color of a sticker"@en .
+   
+<ColorDetermination> rdf:type	sosa:Procedure ;
+  rdfs:label "Procedure for determining the color of a sticker"@en ;
+  sosa:forProperty <StickerColor> .
+    
+<ColorDeterminer> rdf:type	sosa:Sensor;
+  rdfs:label "Sensor for determining the color of a sticker"@en ;
+  sosa:observes <StickerColor> .
+ 
+<StickerAssayOffice> rdf:type	sosa:Platform;  
+  rdfs:label "Assay office for determining the color of a sticker"@en ;
+  sosa:hosts <ColorDeterminer> .
+
+# Adding an Observation
+
+<Observation-Smiley-Color> rdf:type sosa:Observation ;
+  sosa:hasFeatureOfInterest  <SmileySticker> ;
+  sosa:observedProperty  <StickerColor> ;
+  sosa:madeBySensor <ColorDeterminer> ;
+  sosa:usedProcedure <ColorDetermination> ;
+ 
+  sosa:hasSimpleResult "Yellow"^^xsd:string ;
+  sosa:phenomenonTime [
+	rdf:type time:Instant ;
+	time:inXSDDateTimeStamp "2017-04-15T00:00:00+00:00"^^xsd:dateTimeStamp ] ;
+  sosa:resultTime "2017-04-16T00:00:12+00:00"^^xsd:dateTimeStamp .
+
+# Sampling of the SmileySticker from a wider population of smiley face stickers
+
+# First setting up all the basics: FeatureOfInterest, Sampler, Procedure
+
+<SmileyPopulation>  rdf:type	sosa:FeatureOfInterest ;
+  rdfs:label "A population of smiley face stickers"@en ;
+  sosa:hasProperty <stickerColor> .
+ 
+<SmileySamplingProcedure> rdf:type sosa:Procedure ;
+  rdfs:label "Procedure for sampling smiley stickers"@en .
+
+<SmileySampler> rdf:type sosa:Sampler ;
+  rdfs:label "Smiley sticker sampler"@en ;
+  sosa:implements <SmileySamplingProcedure> .
+ 
+# Adding a Sampling act
+
+<SmileySampling> rdf:type sosa:Sampling ;
+  rdfs:label "Sampling of a representative Smiley Sticker from a Collection of Smiley Stickers"@en ;
+  sosa:hasFeatureOfInterest <SmileyPopulation> ;
+  sosa:usedProcedure <SmileySamplingProcedure> ;
+  sosa:madeBySampler <SmileySampler> ;
+  sosa:hasResult <SmileySticker> .

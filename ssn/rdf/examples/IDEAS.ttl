@@ -5,7 +5,7 @@
  @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
  @prefix cdt: <http://w3id.org/lindt/custom_datatypes#>.
 
-@base <http://example.org/sosa/data/> .
+@base <http://example.org/data/> .
 
 <IDEA> a owl:Ontology ;
    owl:imports <http://www.w3.org/ns/sosa> .

@@ -10,7 +10,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix ex: <http://example.org/> .
+@prefix ex: <http://example.org/data/> .
 
 ex:SC1
   a sosa:SampleCollection ;

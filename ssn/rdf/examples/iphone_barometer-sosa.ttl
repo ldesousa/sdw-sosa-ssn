@@ -1,5 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix < <http://example.org/sosa/data/> .
+@prefix < <http://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
@@ -10,7 +10,7 @@
 @prefix time: <http://www.w3.org/2006/time#>.
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/sosa/data/> .
+@base <http://example.org/data/> .
 
 <iphone_barometer-sosa> a owl:Ontology ;
   dcterms:description "The barometric readings from a Bosch Sensortec BMP282 sensor in an Apple IPhone 7 observed on June 6 2017 using only the SOSA core."@en ;

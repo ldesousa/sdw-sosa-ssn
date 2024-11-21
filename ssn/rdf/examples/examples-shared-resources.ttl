@@ -9,7 +9,7 @@
 @prefix time: <http://www.w3.org/2006/time#>.
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/sosa/data/> .
+@base <http://example.org/data/> .
 
 <shared-resources> a owl:Ontology ;
   dcterms:title "Shared Resources for the SOSA/SSN Examples"@en ;

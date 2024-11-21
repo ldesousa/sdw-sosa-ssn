@@ -1,7 +1,7 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/sosa/data/> .
+@base <http://example.org/data/> .
 
 # movements of spinning cups on wind sensor #14 serves as proxies for the wind speed
 # at the location of the wind sensor.
