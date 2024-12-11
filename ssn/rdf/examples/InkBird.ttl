@@ -24,7 +24,7 @@
         ] ;
         system:hasSystemProperty [
             a system:Accuracy ;
-            schema:value "0.5"^^unit:DEG_C ;
+            qudt:value "0.5"^^unit:DEG_C ;
         ] ;
 
     ] ;
@@ -38,7 +38,7 @@
         ] ;
         system:hasSystemProperty [
             a system:Resolution ;
-            schema:value "2"^^unit:PERCENT ;
+            qudt:value "2"^^unit:PERCENT ;
         ] ;
 
     ] ;
