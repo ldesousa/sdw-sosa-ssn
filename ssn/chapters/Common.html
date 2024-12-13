@@ -142,10 +142,18 @@
                 <a href="#SOSAProperty">sosa:Property</a> should be used instead.
             </p>
 
-            <em property="rdfs:label">Property</em> -
-            <span property="skos:definition">An identifiable quality of a <a
-                    href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that can be observed or
-                acted upon. A property can apply to different features of interest.</span>
+            <p>
+                <em property="rdfs:label">Property</em> -
+                <span property="skos:definition">An identifiable quality of a <a
+                        href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that can be observed or
+                    acted upon. A property can apply to different features of interest.</span>
+            </p>
+
+            <p class="note">The SSN Ontology does not provide a model for the description of observable and actuatable
+                properties.
+                See <a href="#property-definition">Property definitions</a> for links to some external resources that
+                address this.</p>
+
             <table>
                 <tbody>
                     <tr>
@@ -1478,30 +1486,38 @@
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasResult</p>
             <p><strong>an OWL Object Property</strong></p>
 
-            <em property="rdfs:label">has result</em> -
-            <span property="skos:definition">Relation linking an <a href="#SOSAExecution">Execution</a>
-                (i.e. <a href="#SOSAActuation">Actuation</a>
-                or <a href="#SOSAObservation">Observation</a> or act of <a href="#SOSASampling">Sampling</a>) to its
-                result or <a href="#SOSASample">Sample</a>.
-                <br><br>
-                In the case of an <a href="#SOSAActuation">Actuation</a>, the result is the expected value
-                of the <a href="#SOSAProperty">Property</a> following the execution of
-                the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSAActuator">Actuator</a>.
-                <br><br>
-                In the case of an <a href="#SOSAObservation">Observation</a>, the result is the value of
-                the <a href="#SOSAProperty">Property</a> produced by the execution of
-                the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSASensor">Sensor</a>.
-                <br><br>
-                In the case of a <a href="#SOSASampling">Sampling</a>, the result is the <a
-                    href="#SOSASample">Sample</a> produced by the execution of the <a
-                    href="#SOSAProcedure">Procedure</a> by the <a href="#SOSASampler">Sampler</a>.
-                <br><br>
-                An <a href="#SOSAExecution">Execution</a> has a single result, therefore <a
-                    href="#SOSAhasResult">sosa:hasResult</a> is <a
-                    href="https://www.w3.org/TR/owl2-syntax/#Functional_Object_Properties">Functional</a>.
-                <br><br>
-            </span>
-            <br>
+            <p>
+                <em property="rdfs:label">has result</em> -
+                <span property="skos:definition">Relation linking an <a href="#SOSAExecution">Execution</a>
+                    (i.e. <a href="#SOSAActuation">Actuation</a>
+                    or <a href="#SOSAObservation">Observation</a> or act of <a href="#SOSASampling">Sampling</a>) to its
+                    result or <a href="#SOSASample">Sample</a>.
+                    <br><br>
+                    In the case of an <a href="#SOSAActuation">Actuation</a>, the result is the expected value
+                    of the <a href="#SOSAProperty">Property</a> following the execution of
+                    the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSAActuator">Actuator</a>.
+                    <br><br>
+                    In the case of an <a href="#SOSAObservation">Observation</a>, the result is the value of
+                    the <a href="#SOSAProperty">Property</a> produced by the execution of
+                    the <a href="#SOSAProcedure">Procedure</a> by the <a href="#SOSASensor">Sensor</a>.
+                    <br><br>
+                    In the case of a <a href="#SOSASampling">Sampling</a>, the result is the <a
+                        href="#SOSASample">Sample</a> produced by the execution of the <a
+                        href="#SOSAProcedure">Procedure</a> by the <a href="#SOSASampler">Sampler</a>.
+                    <br><br>
+                    An <a href="#SOSAExecution">Execution</a> has a single result, therefore <a
+                        href="#SOSAhasResult">sosa:hasResult</a> is <a
+                        href="https://www.w3.org/TR/owl2-syntax/#Functional_Object_Properties">Functional</a>.
+                    <br><br>
+                </span>
+            </p>
+
+            <p class="note">The result of an actuation or observation may be a quantity.
+                See <a href="#uom">Quantity Values and Units of Measure</a> for patterns to describe this.</p>
+
+            <p class="note">The result of an observation may be a geometry.
+                See <a href="#location">Location and Geometry</a> for patterns to describe this.</p>
+
             <table>
                 <tbody>
                     <tr>
@@ -2372,11 +2388,18 @@
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Deployment</p>
             <p><strong>an OWL Class</strong></p>
 
-            <em property="rdfs:label">Deployment</em> -
-            <span property="skos:definition"> A <a href="#SOSADeployment">Deployment</a> of one or more assets (<a
-                    href="#SOSASystem">Systems</a> or <a href="#SOSAPlatform">sosa:Platforms</a>) to execute procedures
-                with respect to designated features-of-interest.
-                <a href="#SOSADeployment">Deployment</a> may be done on a <a href="#SOSAPlatform">Platform</a>.</span>
+            <p>
+                <em property="rdfs:label">Deployment</em> -
+                <span property="skos:definition"> A <a href="#SOSADeployment">Deployment</a> of one or more assets (<a
+                        href="#SOSASystem">Systems</a> or <a href="#SOSAPlatform">sosa:Platforms</a>) to execute
+                    procedures
+                    with respect to designated features-of-interest.
+                    <a href="#SOSADeployment">Deployment</a> may be done on a <a
+                        href="#SOSAPlatform">Platform</a>.</span>
+            </p>
+            <p class="note">A Deployment may have a geographic location. See <a href="#location">Location and
+                    Geometry</a> for patterns to describe this.</p>
+
             <table>
                 <tbody>
                     <tr>
@@ -2454,6 +2477,7 @@
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Platform</p>
             <p><strong>an OWL Class</strong></p>
 
+
             <em property="rdfs:label">Platform</em> -
             <span property="skos:definition">A <a href="#SOSAPlatform">Platform</a> is an entity that <a
                     href="#SOSAhosts">hosts</a> other entities, particularly <a href="#SOSASensor">Sensors</a>,
@@ -2462,6 +2486,10 @@
             <span property="skos:scopeNote">The INSPIRE 'Environmental Monitoring Facility' may be implemented
                 using
                 SOSA by the OWL/RDFS class 'Platform'.</span> <br>
+
+            <p class="note">A Platform may have a geographic location. See <a href="#location">Location and Geometry</a>
+                for patterns to describe this.</p>
+
             <table>
                 <tbody>
                     <tr>
@@ -2521,16 +2549,18 @@
             <h6><a href="#SOSASystem">sosa:System</a></h6>
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/System</p>
             <p><strong>an OWL Class</strong></p>
+            <p>
+                <em property="rdfs:label">System</em> -
+                <span property="skos:definition">
+                    A piece of infrastructure that implements a <a href="#SOSAProcedure">Procedure</a>.
 
-            <p class="note">See <a href="#SystemType">this pattern</a> for guidance on describing system types vs.
-                individuals.</p>
-
-            <em property="rdfs:label">System</em> -
-            <span property="skos:definition">
-                A piece of infrastructure that implements a <a href="#SOSAProcedure">Procedure</a>.
-
-                A System may have components, its sub-systems, which are other systems.
-            </span>
+                    A System may have components, its sub-systems, which are other systems.
+                </span>
+            </p>
+            <p class="note">See <a href="#SystemType">Systems types and individuals</a> for guidance on describing types
+                vs. individuals.</p>
+            <p class="note">A System may have a geographic location. See <a href="#location">Location and Geometry</a>
+                for patterns to describe this.</p>
 
             <table>
                 <tbody>

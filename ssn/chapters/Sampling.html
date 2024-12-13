@@ -118,13 +118,16 @@
         <span property="skos:definition">Feature which is intended to be representative of a
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> on which
             <a href="#SOSAObservation">Observations</a> may be made.</span> <br>
-        <p class="note">In the previous edition Sample was axiomatized as a sub-class of
+        <p class="note">
+            In the previous edition Sample was axiomatized as a sub-class of
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
             The subclass relationship is removed in this edition.
             The relationship between types and <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>
             is <a href="#model-domain">explained further below</a>.
         </p>
-        <p>
+
+        <p class="note">A Sample may have a geographic location. See <a href="#location">Location and Geometry</a> for patterns to describe this.</p>
+
         <table>
             <tbody>
                 <tr>
@@ -383,6 +386,9 @@
         <span property="skos:definition">A device that implements a (Sampling) <a href="#SOSAProcedure">Procedure</a> to
             create or transform one or more samples.</span>
         <br>
+
+        <p class="note">A Sampler may have a geographic location. See <a href="#location">Location and Geometry</a> for patterns to describe this.</p>
+
         <table>
             <tbody>
                 <tr>
