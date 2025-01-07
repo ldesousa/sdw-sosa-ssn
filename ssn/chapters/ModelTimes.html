@@ -1,13 +1,22 @@
 <h3>Result- and Phenomenon-Time</h3>
 
 <p>
-    Two key properties of ............
+    Multiple times are associated with an <a href="#SOSAExecution">Execution</a>. 
+    Trivially, since an Execution is a time-bounded activity, there is a <a href="#SOSAstartTime">startTime</a> and <a href="#SOSAendTime">endTime</a>. 
+    In the case of <a href="#SOSAObservation">Observation</a> and <a href="#SOSASampling">Sampling</a> the end of the Execution is the time that the result is generated so it is called <a href="#SOSAresultTime">resultTime</a>
+    In the case of <a href="#SOSAActuation">Actuation</a> and <a href="#SOSAObservation">Observation</a> the <a href="#SOSAphenomenonTime">phenomenonTime</a> is the interval when the change or result applies to the actuated- or observed-property. 
 </p>
+<p>
+    In the simplest case, an Execution is instantaneous and all these times are the same. 
+    More commonly, these times are different. 
+    Different kinds of executions have different relationships between these times.
+</p>
+
 <h4>Forecast</h4>
 <p>
     A forecast may be represented as an observation where the value of <code>sosa:phenomenonTime</code> is later in
     time than the <code>sosa:resultTime</code>.
-    This means that: The time when the Observation execution was completed is before the time that the Result of the
+    The time when the Observation execution was completed is before the time that the Result of the
     observation applies to the FeatureOfInterest.
 </p>
 <h5>Serialised in Turtle</h5>
@@ -26,3 +35,26 @@
     Describing a plan for some actuation or observation in the future is not covered by this
     specification.
 </p>
+
+<h4>Historical observations</h4>
+<p>
+    Observations in historical sciences, including geology and archeology, may be made to determine the state of the world in the remote past. 
+    For example:
+
+</p>
+<ul>
+    <li>
+        the diet of past inhabitants can be determined by examination of middens and other archaeological features
+    </li>
+    <li>
+        the concentration of CO<sub>2</sub> can be measured in bubbles in ice-cores that are assumed to sample the atmosphere at some past time
+    </li>
+    <li>
+        the pressure and temperature conditions at which a metamorphic rock was formed can be determined from its mineralogy
+    </li>
+</ul>
+<p>
+    In each of these cases the <a href="#SOSAphenomenonTime">phenomenonTime</a> is far in the past, while the <a href="#SOSAresultTime">resultTime</a> is contemporary. 
+</p>
+<pre class="example" data-include="./rdf/examples/diet.ttl" data-include-format="text"></pre>
+<pre class="example" data-include="./rdf/examples/ice-core.ttl" data-include-format="text"></pre>
