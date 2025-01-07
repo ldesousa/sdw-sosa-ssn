@@ -14,11 +14,11 @@
 # the atmosphere is sampled at a specific location
 # location coordinates are given using GeoSPARQL
 
-<earthAtmosphere> a sosa:FeatureOfInterest ;
+<EarthAtmosphere> a sosa:FeatureOfInterest ;
   rdfs:label "Atmosphere of Earth"@en .
 
-<earthAtmosphere_StE> a sosa:Sample ;
-  sosa:isSampleOf <earthAtmosphere> ;
+<EarthAtmosphere_StE> a sosa:Sample ;
+  sosa:isSampleOf <EarthAtmosphere> ;
   geo:hasGeometry [ 
     a geo:Point ;
     geo:asWKT "POINT (4.387611 45.437772)"^^geo:WktLiteral ;
@@ -47,7 +47,7 @@
 
 <Observation/346344> a sosa:Observation ;
   sosa:observedProperty <atmosphericPressure> ;
-  sosa:hasFeatureOfInterest  <earthAtmosphere_StE> ;
+  sosa:hasFeatureOfInterest  <EarthAtmosphere_StE> ;
   sosa:madeBySensor <sensor/35-207306-844818-0/BMP282> ;
   sosa:hasSimpleResult "1021.45 hPa"^^cdt:ucum ;
   sosa:resultTime "2017-06-06T12:36:12Z"^^xsd:dateTime .
@@ -58,7 +58,7 @@
 
 <Observation/346345> a sosa:Observation ;
   sosa:observedProperty <atmosphericPressure> ;
-  sosa:hasFeatureOfInterest  <earthAtmosphere_StE> ;
+  sosa:hasFeatureOfInterest  <EarthAtmosphere_StE> ;
   sosa:madeBySensor <sensor/35-207306-844818-0/BMP282> ;
   sosa:hasResult [
     a qudt:QuantityValue ;
