@@ -114,10 +114,12 @@
         <h5><a href="#SOSASample">sosa:Sample</a></h5>
         <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sample</p>
         <p><strong>an OWL Class</strong></p>
-        <em property="rdfs:label">Sample</em> -
-        <span property="skos:definition">Feature which is intended to be representative of a
-            <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> on which
-            <a href="#SOSAObservation">Observations</a> may be made.</span> <br>
+        <p>
+            <em property="rdfs:label">Sample</em> -
+            <span property="skos:definition">Feature which is intended to be representative of a
+                <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> on which
+                <a href="#SOSAObservation">Observations</a> may be made.</span>
+        </p>
         <p class="note">
             In the previous edition Sample was axiomatized as a sub-class of
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
@@ -126,7 +128,8 @@
             is <a href="#model-domain">explained further below</a>.
         </p>
 
-        <p class="note">A Sample may have a geographic location. See <a href="#location">Location and Geometry</a> for patterns to describe this.</p>
+        <p class="note">A Sample may have a geographic location. See <a href="#location">Location and Geometry</a> for
+            patterns to describe this.</p>
 
         <table>
             <tbody>
@@ -387,7 +390,8 @@
             create or transform one or more samples.</span>
         <br>
 
-        <p class="note">A Sampler may have a geographic location. See <a href="#location">Location and Geometry</a> for patterns to describe this.</p>
+        <p class="note">A Sampler may have a geographic location. See <a href="#location">Location and Geometry</a> for
+            patterns to describe this.</p>
 
         <table>
             <tbody>
@@ -462,11 +466,16 @@
         <h5><a href="#SOSASampling">sosa:Sampling</a></h5>
         <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sampling</p>
         <p><strong>an OWL Class</strong></p>
-
-        <em property="rdfs:label">Sampling</em> -
-        <span property="skos:definition">An act of <a href="#SOSASampling">Sampling</a> carries out a
-            (Sampling) <a href="#SOSAProcedure">Procedure</a> to create one or more <a
-                href="#SOSASample">Samples</a>.</span>
+        <p>
+            <em property="rdfs:label">Sampling</em> -
+            <span property="skos:definition">An act of <a href="#SOSASampling">Sampling</a> carries out a
+                (Sampling) <a href="#SOSAProcedure">Procedure</a> to create one or more <a
+                    href="#SOSASample">Samples</a>.</span>
+        </p>
+        <p class="note">The different time-properties on a <a href="#SOSASampling">sosa:Sampling</a> support
+            the description of plans, forecasts and predictions as well as descriptions of various historical
+            scenarios.
+            See <a href="#times">Temporal properties</a> for patterns related to these.</p>
         <table>
             <tbody>
                 <tr>

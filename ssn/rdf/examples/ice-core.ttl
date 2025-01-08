@@ -9,40 +9,6 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-ex:BP
-  a time:TRS ;
-  skos:definition "Years before 1950, positive backwards" ;
-.
-ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q571430> ;
-. 
-ex:EarthAtmosphere a sosa:FeatureOfInterest ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
-  . 
-<http://vocab.nerc.ac.uk/collection/S06/current/S0600001/> a sosa:Property ;
-  skos:definition "The age of an object determined by radiocarbon dating expressed relative to a datum of AD 1950." ;
-  skos:prefLabel "14C age" ;
-.
-<http://purl.obolibrary.org/obo/ENVO_04000004> a sosa:Property ;
-  skos:prefLabel "concentration of carbon dioxide in air" ;
-. 
-ex:WellDrilling4578 a sosa:Sampling ;
-  geo:hasGeometry [ 
-    a geo:Point ;
-    geo:asWKT "POINT (9.32 -73.35)"^^geo:WktLiteral ;
-  ] ;
-  sosa:hasResult ex:IceCore12 ;
-  sosa:madeBySampler ex:thermalDrill2 ;
-  sosa:resultTime "2017-04-03T11:12:00Z"^^xsd:dateTime ;
-  sosa:hasFeatureOfInterest ex:Antarctic_ice_sheet ;
-.
-ex:CoreEx1923 a sosa:Sampling ;
-  ex:offset "15.2"^^unit:M ;
-  sosa:hasResult ex:Bubble873 ;
-  sosa:madeBySampler orcid:0000-0002-3884-3420 ;
-  sosa:resultTime "2018-01-09T14:12:00Z"^^xsd:dateTime ;
-  sosa:hasFeatureOfInterest ex:IceCore12 ;
-.
 ex:IceCore12 a sosa:Sample ;
   sosa:isSampleOf ex:Antarctic_ice_sheet ;
   sosa:isResultOf ex:WellDrilling4578 ;
@@ -53,19 +19,19 @@ ex:Bubble873 a sosa:Sample ;
   sosa:isResultOf ex:CoreEx1923 ;
 .
 ex:Ob873t2 a sosa:Observation ;
-  sosa:observedProperty <http://vocab.nerc.ac.uk/collection/S06/current/S0600001/> ;
+  sosa:observedProperty ex:C14-Age ;
   sosa:hasFeatureOfInterest ex:Bubble873 ;
   sosa:hasResult "7530"^^unit:YR ;
   sosa:resultTime "2018-01-09T14:15:00Z"^^xsd:dateTime ;
 .
 ex:Ob873c4 a sosa:Observation ;
-  sosa:observedProperty <http://purl.obolibrary.org/obo/ENVO_04000004> ;
+  sosa:observedProperty ex:CO2-Concentration ;
   sosa:hasFeatureOfInterest ex:Bubble873 ;
   sosa:hasResult "240"^^unit:PPM ;
   sosa:resultTime "2018-01-09T14:16:00Z"^^xsd:dateTime ;
 .
 ex:Oatc349 a sosa:Observation ;
-  sosa:observedProperty <http://purl.obolibrary.org/obo/ENVO_04000004> ;
+  sosa:observedProperty ex:CO2-Concentration ;
   sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
   sosa:hasResult "240"^^unit:PPM ;
   sosa:phenomenonTime [ 
@@ -77,3 +43,39 @@ ex:Oatc349 a sosa:Observation ;
   sosa:resultTime "2018-01-09T14:16:00Z"^^xsd:dateTime ;
   sosa:hasInputValue ex:Ob873t2 , ex:Ob873c4 ;
 .
+ex:WellDrilling4578 a sosa:Sampling ;
+  geo:hasGeometry [ 
+    a geo:Point ;
+    geo:asWKT "POINT (9.32 -73.35)"^^geo:WktLiteral ;
+  ] ;
+  sosa:hasResult ex:IceCore12 ;
+  sosa:madeBySampler ex:thermalDrill2 ;
+  sosa:resultTime "2017-04-03T11:12:00Z"^^xsd:dateTime ;
+  sosa:hasFeatureOfInterest ex:Antarctic_ice_sheet ;
+.
+ex:CoreEx1923 a sosa:Sampling ;
+  ex:offset "15.202"^^unit:M ;
+  sosa:hasResult ex:Bubble873 ;
+  sosa:madeBySampler orcid:0000-0002-3884-3420 ;
+  sosa:resultTime "2018-01-09T14:12:00Z"^^xsd:dateTime ;
+  sosa:hasFeatureOfInterest ex:IceCore12 ;
+.
+ex:BP
+  a time:TRS ;
+  skos:definition "Years before 1950, positive backwards" ;
+.
+ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q571430> ;
+. 
+ex:EarthAtmosphere a sosa:FeatureOfInterest ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
+  . 
+ex:C14-Age a sosa:Property ;
+  owl:sameAs <http://vocab.nerc.ac.uk/collection/S06/current/S0600001/> ;
+  skos:definition "The age of an object determined by radiocarbon dating expressed relative to a datum of AD 1950." ;
+  skos:prefLabel "14C age" ;
+.
+ex:CO2-Concentration a sosa:Property ;
+  owl:sameAs <http://purl.obolibrary.org/obo/ENVO_04000004> ;
+  skos:prefLabel "concentration of carbon dioxide in air" ;
+. 
