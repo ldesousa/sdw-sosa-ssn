@@ -19,7 +19,7 @@
 
 <InkBird-IBS-TH2> a owl:Class;
     rdfs:label "Inkbird IBS-TH2"@en ;
-    rdfs:subClassOf gs1:Product, sosa:Platform, equipment:Equipment, <https://w3id.org/seas/BluetoothCommunicationDevice>
+    rdfs:subClassOf gs1:Product, sosa:Platform, equipment:Equipment, <https://w3id.org/seas/BluetoothCommunicationDevice>;
     gs1:pip <https://inkbird.com/products/hygrometer-ibs-th2> ;
     sosa:hosts <IBSTH2TemperatureSensor> .
 
