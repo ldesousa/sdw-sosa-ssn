@@ -49,21 +49,34 @@
 </p>
 <ul>
     <li>
-        the diet of past inhabitants can be determined by examination of middens and other archaeological features
+        the diet of past communities can be determined by examination of middens and other archaeological features
+        (<a href="#diet"></a>)
     </li>
     <li>
         the concentration of CO<sub>2</sub> can be measured in bubbles in ice-cores that are assumed to sample the
-        atmosphere at some past time. 
-        The concentration and age are the results of two prior observations, which provide input-values to the final observation. 
-    </li>
-    <li>
-        the pressure and temperature conditions at which a metamorphic rock was formed can be determined from its
-        mineralogy
+        atmosphere at some past time.
+        The concentration and age are the results of two initial observations, which provide input-values to the final
+        observation (<a href="#paleo-atmosphere"></a>).
     </li>
 </ul>
-<p>
-    In each of these cases the <a href="#SOSAphenomenonTime">phenomenonTime</a> is far in the past, while the <a
-        href="#SOSAresultTime">resultTime</a> is contemporary.
-</p>
+
+<figure id="diet">
+    <img alt="Observation with phenomemon-time in the deep past - paleo diet" src="./images/diet.png" />
+    <figcaption>Observation with phenomemon-time in the deep past.
+    </figcaption>
+</figure>
 <pre class="example" data-include="./rdf/examples/diet.ttl" data-include-format="text"></pre>
+
+<figure id="paleo-atmosphere">
+    <img alt="Observation with phenomemon-time in the deep past - atmospheric CO2"
+        src="./images/paleo-atmosphere.png" />
+    <figcaption>Observation with phenomemon-time in the deep past, constructed from the output of two primitive
+        observations.
+    </figcaption>
+</figure>
 <pre class="example" data-include="./rdf/examples/ice-core.ttl" data-include-format="text"></pre>
+
+<p>
+    In each of these cases the ultimate <a href="#SOSAphenomenonTime">phenomenonTime</a> is far in the past,
+    while the <a href="#SOSAresultTime">resultTime</a> is contemporary.
+</p>
