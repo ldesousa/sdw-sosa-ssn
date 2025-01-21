@@ -1,14 +1,18 @@
 <h3>Temporal properties</h3>
 
 <p>
-    Multiple times are associated with an <a href="#SOSAExecution">Execution</a>. 
-    Trivially, since an Execution is a time-bounded activity, there is a <a href="#SOSAstartTime">startTime</a> and <a href="#SOSAendTime">endTime</a>. 
-    In the case of <a href="#SOSAObservation">Observation</a> and <a href="#SOSASampling">Sampling</a> the end of the Execution is the time that the result is generated so it is called <a href="#SOSAresultTime">resultTime</a>.
-    In the case of <a href="#SOSAActuation">Actuation</a> and <a href="#SOSAObservation">Observation</a> the <a href="#SOSAphenomenonTime">phenomenonTime</a> is the interval when the change or result applies to the actuated- or observed-property. 
+    Multiple times are associated with an <a href="#SOSAExecution">Execution</a>.
+    Trivially, since an Execution is a time-bounded activity, there is a <a href="#SOSAstartTime">startTime</a> and <a
+        href="#SOSAendTime">endTime</a>.
+    In the case of <a href="#SOSAObservation">Observation</a> and <a href="#SOSASampling">Sampling</a> the end of the
+    Execution is the time that the result is generated so it is called <a href="#SOSAresultTime">resultTime</a>.
+    In the case of <a href="#SOSAActuation">Actuation</a> and <a href="#SOSAObservation">Observation</a> the <a
+        href="#SOSAphenomenonTime">phenomenonTime</a> is the interval when the change or result applies to the actuated-
+    or observed-property.
 </p>
 <p>
-    In the simplest case, an Execution is instantaneous and all these times are the same. 
-    More commonly, these times are different. 
+    In the simplest case, an Execution is instantaneous and all these times are the same.
+    More commonly, these times are different.
     Different kinds of executions have different relationships between these times.
 </p>
 
@@ -38,7 +42,8 @@
 
 <h4>Historical observations</h4>
 <p>
-    Observations in historical sciences, including geology and archeology, may be made to determine the state of the world in the remote past. 
+    Observations in historical sciences, including geology and archeology, may be made to determine the state of the
+    world in the remote past.
     For example:
 
 </p>
@@ -47,14 +52,18 @@
         the diet of past inhabitants can be determined by examination of middens and other archaeological features
     </li>
     <li>
-        the concentration of CO<sub>2</sub> can be measured in bubbles in ice-cores that are assumed to sample the atmosphere at some past time
+        the concentration of CO<sub>2</sub> can be measured in bubbles in ice-cores that are assumed to sample the
+        atmosphere at some past time. 
+        The concentration and age are the results of two prior observations, which provide input-values to the final observation. 
     </li>
     <li>
-        the pressure and temperature conditions at which a metamorphic rock was formed can be determined from its mineralogy
+        the pressure and temperature conditions at which a metamorphic rock was formed can be determined from its
+        mineralogy
     </li>
 </ul>
 <p>
-    In each of these cases the <a href="#SOSAphenomenonTime">phenomenonTime</a> is far in the past, while the <a href="#SOSAresultTime">resultTime</a> is contemporary. 
+    In each of these cases the <a href="#SOSAphenomenonTime">phenomenonTime</a> is far in the past, while the <a
+        href="#SOSAresultTime">resultTime</a> is contemporary.
 </p>
 <pre class="example" data-include="./rdf/examples/diet.ttl" data-include-format="text"></pre>
 <pre class="example" data-include="./rdf/examples/ice-core.ttl" data-include-format="text"></pre>
