@@ -21,28 +21,44 @@
 </p>
 
 <h5>Systems, Platforms, Deployments</h5>
-<p>
-    For example, a <a href="#SOSASystem">System</a>, such as a <a href="#SOSASensor">Sensor</a> might be permanently located in a specific location, described as follows:
-</p>
-<pre class="example" data-include="./rdf/examples/LocatedSensor.ttl" data-include-format="text"></pre>
-<p>
-    Alternatively, the location may be associated with a <a href="#SOSAPlatform">Platform</a>, which might also host other Systems:
-</p>
-<pre class="example" data-include="./rdf/examples/LocatedPlatform.ttl" data-include-format="text"></pre>
-<p>
-    If this Sensor location is not permanent, then it may be characterized as a <a href="#SOSADeployment">Deployment</a>:
-</p>
-<pre class="example" data-include="./rdf/examples/LocatedDeployment.ttl" data-include-format="text"></pre>
 
+<p>
+    A number of patterns may be used to characterize the location of a <a href="#SOSASystem">System</a>, depending on
+    how much detail about <a href="#SOSAPlatform">Platforms</a> and <a href="#SOSADeployment">Deployments</a> is useful.
+</p>
 <figure id="fig-system-location">
-    <img alt="Alternative ways to characterize the location of a Sensor" src="./images/SensorLocation.png" style="width:100%" />
+    <img alt="Alternative ways to characterize the location of a Sensor" src="./images/SensorLocation.png"
+        style="width:100%" />
     <figcaption>System location - direct and indirect descriptions</figcaption>
 </figure>
 
+<p>
+    For example, a System, such as a <a href="#SOSASensor">Sensor</a> might be permanently in one specific location,
+    described as follows:
+</p>
+<pre class="example" data-include="./rdf/examples/LocatedSensor.ttl" data-include-format="text"></pre>
+<p>
+    Alternatively, the location may be associated with a Platform, which then might also host other Systems:
+</p>
+<pre class="example" data-include="./rdf/examples/LocatedPlatform.ttl" data-include-format="text"></pre>
+<p>
+    If this Sensor location is not permanent, then it may be characterized as a Deployment:
+</p>
+<pre class="example" data-include="./rdf/examples/LocatedDeployment.ttl" data-include-format="text"></pre>
+
 
 <h5>Samples, Features</h5>
+
+<p>Similarly, Location can be associated directly or indirectly with a <a href="#SOSASample">Sample</a>. </p>
+
+<figure id="fig-execution-location">
+    <img alt="Alternative ways to characterize the location of a Sample" src="./images/SampleLocation.png"
+        style="width:100%" />
+    <figcaption>Sample location - direct and indirect descriptions</figcaption>
+</figure>
+
 <p>
-    Observations of the atmosphere are necessarily made at a specific location. 
+    Observations of the atmosphere are necessarily made at a specific location.
     The location of an air Sample might use the following pattern:
 </p>
 <pre class="example" data-include="./rdf/examples/SampleLocation.ttl" data-include-format="text"></pre>
@@ -57,15 +73,14 @@
 </p>
 <pre class="example" data-include="./rdf/examples/SamplingLocation.ttl" data-include-format="text"></pre>
 
-<figure id="fig-execution-location">
-    <img alt="Alternative ways to characterize the location of a Sample" src="./images/SampleLocation.png" style="width:100%" />
-    <figcaption>Sample location - direct and indirect descriptions</figcaption>
-</figure>
-
 <h4>Relative locations</h4>
 <p>
-    The location of the <a href="#SOSASystem">System</a> (Actuator, Sensor, Sampler) responsible for making an <a href="#SOSAExecution">Execution</a> (Actuation, Observation, Sampling) may also be of interest. 
-    In particular, the <em>relative</em> locations of the <a href="#SOSASensor">Sensor</a> (or its <a href="#SOSADeployment">Deployment</a>) and the feature of interest, along with the <a href="#SOSAphenomenonTime">phenomenon-</a> and <a href="#SOSAresultTime">result-time</a>, fall into distinct patterns for different <a href="#SOSAObservation">Observation</a> modes as follows:
+    The location of the <a href="#SOSASystem">System</a> (Actuator, Sensor, Sampler) responsible for making an <a
+        href="#SOSAExecution">Execution</a> (Actuation, Observation, Sampling) may also be of interest.
+    In particular, the <em>relative</em> locations of the <a href="#SOSASensor">Sensor</a> (or its <a
+        href="#SOSADeployment">Deployment</a>) and the feature of interest, along with the <a
+        href="#SOSAphenomenonTime">phenomenon-</a> and <a href="#SOSAresultTime">result-time</a>, fall into distinct
+    patterns for different <a href="#SOSAObservation">Observation</a> modes as follows:
 </p>
 <dl>
     <dt>in situ monitoring</dt>
@@ -73,10 +88,12 @@
     <dt>remote sensing</dt>
     <dd>location of sensor is remote from the feature of interest</dd>
     <dt>ex situ observation (e.g. lab measurements)</dt>
-    <dd>location of sensor and location of the ultimate feature of interest are different; result-time later than phenomenon-time</dd>
+    <dd>location of sensor and location of the ultimate feature of interest are different; result-time later than
+        phenomenon-time</dd>
 </dl>
 <p>
-    Note that in the case of ex situ measurements, there will usually be a <a href="#SOSASample">Sample</a> and thus an act of <a href="#SOSASampling">Sampling</a> involved, whose properties determine the location and phenomenon-time. 
+    Note that in the case of ex situ measurements, there will usually be a <a href="#SOSASample">Sample</a> and thus an
+    act of <a href="#SOSASampling">Sampling</a> involved, whose properties determine the location and phenomenon-time.
 </p>
 
 <h4>Geometry results</h4>
