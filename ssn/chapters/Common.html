@@ -72,9 +72,11 @@
             </p>
             <p class="note">
                 The relationship between <a href="#SOSAFeatureOfInterest">sosa:FeatureOfInterest</a>, and types or
-                classes defined in a domain model is explained below in <a href="#model-domain">Common Modeling
-                    Questions</a>
+                classes defined in a domain model is explained below in <a href="#model-domain">Common Patterns</a>
             </p>
+            <p class="note">A Feature of Interest may have a geographic location.
+                See <a href="#samples-features">Location and Geometry</a> for patterns to describe this.</p>
+
             <table class="ssn ssn">
                 <tbody>
                     <tr>
@@ -1377,7 +1379,7 @@
                 The distinction between <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, and <a
                     href="#SOSAhasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a> is explored further
                 in
-                <a href="#ultimate-FoI">Common Modeling Questions</a>
+                <a href="#ultimate-FoI">Common Patterns</a>
             </p>
 
             <table>
@@ -1547,7 +1549,7 @@
                 See <a href="#uom">Quantity Values and Units of Measure</a> for patterns to describe this.</p>
 
             <p class="note">The result of an observation may be a geometry.
-                See <a href="#location">Location and Geometry</a> for patterns to describe this.</p>
+                See <a href="#geometry-results">Location and Geometry</a> for patterns to describe this.</p>
 
             <table>
                 <tbody>
@@ -1722,7 +1724,7 @@
                 The distinction between <a href="#SOSAhasFeatureOfInterest">sosa:hasFeatureOfInterest</a>, and <a
                     href="#SOSAhasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a> is explored further
                 in
-                <a href="#ultimate-FoI">Common Modeling Questions</a>
+                <a href="#ultimate-FoI">Common Patterns</a>
             </p>
             <table>
                 <tbody>
@@ -2451,7 +2453,8 @@
                     <a href="#SOSADeployment">Deployment</a> may be done on a <a
                         href="#SOSAPlatform">Platform</a>.</span>
             </p>
-            <p class="note">A Deployment may have a geographic location. See <a href="#location">Location and
+            <p class="note">A Deployment may have a geographic location. See <a
+                    href="#systems-platforms-deployments">Location and
                     Geometry</a> for patterns to describe this.</p>
 
             <table>
@@ -2544,7 +2547,8 @@
                     SOSA by the OWL/RDFS class 'Platform'.</span>
             </p>
 
-            <p class="note">A Platform may have a geographic location. See <a href="#location">Location and Geometry</a>
+            <p class="note">A Platform may have a geographic location. See <a
+                    href="#systems-platforms-deployments">Location and Geometry</a>
                 for patterns to describe this.</p>
 
             <table>
@@ -2610,14 +2614,17 @@
                 <em property="rdfs:label">System</em> -
                 <span property="skos:definition">
                     A piece of infrastructure that implements a <a href="#SOSAProcedure">Procedure</a>.
-
+                    <br><br>
                     A System may have components, its sub-systems, which are other systems.
                 </span>
             </p>
-            <p class="note">See <a href="#SystemType">Systems types and individuals</a> for guidance on describing types
+            <p class="note">
+                See <a href="#system-type">Systems Types and Individuals</a> for guidance on describing types
                 vs. individuals.</p>
-            <p class="note">A System may have a geographic location. See <a href="#location">Location and Geometry</a>
-                for patterns to describe this.</p>
+            <p class="note">
+                A System may have a geographic location.
+                See <a href="#systems-platforms-deployments">Location and Geometry</a> for patterns to describe this.
+            </p>
 
             <table>
                 <tbody>
@@ -2641,7 +2648,7 @@
                                 systems, corresponding with the information typically found in a data-sheet.
                                 Individual system <em>instances</em> are <em>members</em> of this class or its
                                 sub-classes.
-                                See <a href="#SystemType">this elaboration of the pattern</a>.
+                                See <a href="#system-type">Common Patterns</a> for guidance.
                                 <br><br>
                             </span>
                             <span rel="skos:scopeNote">
@@ -2926,7 +2933,8 @@
             <h6><a href="#SOSAhasSubSystem">sosa:hasSubSystem</a></h6>
             <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSubSystem</p>
             <p><strong>an OWL Object Property</strong></p>
-            <p class="note">See <a href="#ComplexSystems">this pattern</a> for guidance on describing complex systems.
+            <p class="note">
+                See <a href="#complex-systems">Common Patterns</a> for guidance on describing complex systems.
             </p>
             <p>
                 <em property="rdfs:label">has subsystem</em> -

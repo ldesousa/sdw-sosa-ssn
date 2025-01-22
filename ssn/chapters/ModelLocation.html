@@ -85,13 +85,14 @@
 </figure>
 <pre class="example" data-include="./rdf/examples/LocatedSampling.ttl" data-include-format="text"></pre>
 
-<h4>Relative locations</h4>
+<h4>Relative location patterns</h4>
 <p>
-    The location of the <a href="#SOSASystem">System</a> (Actuator, Sensor, Sampler) responsible for making an <a
-        href="#SOSAExecution">Execution</a> (Actuation, Observation, Sampling) may also be of interest.
-    In particular, the <em>relative</em> locations of the <a href="#SOSASensor">Sensor</a> (or its <a
-        href="#SOSADeployment">Deployment</a>) and the feature of interest, along with the <a
-        href="#SOSAphenomenonTime">phenomenon-</a> and <a href="#SOSAresultTime">result-time</a>, fall into distinct
+    In general, the locations of the <a href="#SOSASystem">System</a> and
+    <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a> for an <a href="#SOSAExecution">Execution</a> are different.
+    For example, the <em>relative</em> locations of the <a href="#SOSASensor">Sensor</a>
+    (or its <a href="#SOSAPlatform">Platform</a> or <a href="#SOSADeployment">Deployment</a>) and the feature of
+    interest (or <a href="#SOSASample">Sample</a>), along with the <a href="#SOSAphenomenonTime">phenomenon-</a> and
+    <a href="#SOSAresultTime">result-time</a>, fall into distinct
     patterns for different <a href="#SOSAObservation">Observation</a> modes as follows:
 </p>
 <dl>
@@ -110,9 +111,9 @@
 
 <h4>Geometry results</h4>
 <p>
-    Geometry may appear in other contexts than as an explicit property of a <code>geo:Feature</code>.
-    For example, a determination of location using a GPS received can be described as an <code>Observation</code> whose
-    <code>sosa:hasResult</code> is a geometry value.
+    Geometry may appear in other contexts.
+    For example, a determination of location using a GPS receiver can be described as an
+    <a href="#SOSAObservation">Observation</a> whose <a href="#SOSAhasResult">hasResult</a> value is a geometry.
     The following example illustrates this pattern, with the result being a GeoSPARQL <code>Geometry</code> object:
 </p>
 <pre class="example" data-include="./rdf/examples/GeometryResult.ttl" data-include-format="text"></pre>
