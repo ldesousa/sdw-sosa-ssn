@@ -76,14 +76,14 @@
   
 <normalTemp> a schema:PropertyValue ;
 	rdfs:comment "A temperature range of -40 to 80 Celsius."@en ;
-	schema:minValue -40.0 ;
-	schema:maxValue 80.0 ;
-	schema:unitCode unit:DegreeCelsius .
+	xsd:minInclusive -40.0 ;
+	xsd:maxInclusive 80.0 ;
+	qudt:unit unit:DegreeCelsius .
 
 <DHT22TempSensitivity> a sosa:Property, ssn-system:Sensitivity, ssn-system:Resolution, schema:PropertyValue ;
 	rdfs:comment "The sensitivity and resolution of the temperature sensor is 0.1 °C in normal temperature and humidity conditions."@en ;
 	schema:value 0.1 ;
-	schema:unitCode unit:DegreeCelsius .
+	qudt:unit unit:DegreeCelsius .
 
 <house/134/deployment> a sosa:Deployment ;
 	rdfs:comment "Deployment of PCB Board 1 and 2 in the kitchen for the purpose of observing the temperature."@en ;
@@ -131,7 +131,11 @@
 	sosa:resultTime "2017-11-15T15:35:13Z"^^xsd:dateTime ;
 	sosa:hasResult [
 		a qudt:QuantityValue ;
+<<<<<<< HEAD
 		qudt:hasUnit unit:DEG_C ;
+=======
+		qudt:unit unit:DegreeCelsius ;
+>>>>>>> 234-link-to-patterns
 		qudt:numericValue "22.9"^^xsd:double
 	] .
 

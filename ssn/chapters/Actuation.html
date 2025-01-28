@@ -38,41 +38,48 @@
         <h5><a href="#SOSAActuation">sosa:Actuation</a></h5>
         <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuation</p>
         <p><strong>an OWL Class</strong></p>
-
-        <em property="rdfs:label">Actuation</em> -
-        <span property="skos:definition">An <a href="#SOSAActuation">Actuation</a> carries out an
-            (Actuation) <a href="#SOSAProcedure">Procedure</a> to change the value of a <a
-                href="#SOSAProperty">Property</a> using an <a href="#SOSAActuator">Actuator</a>.
-            <br>
-            <br>
-            In this context,
-            <br>
-            - <a href="#SOSAhasResult">hasResult</a> shall indicate the expected value of the <a
-                href="#SOSAProperty">Property</a> at the completion of the <a href="#SOSAActuation">Actuation</a>
-        </span>
-        <br>
-        <br>
-        <span property="rdfs:comment"><a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be
-            used to link to an associated <a href="#SOSAObservation">Observation</a> or <a
-                href="#SOSAObservationCollection">ObservationCollection</a> that monitors the actuated
-            property to verify that the result value has been obtained</span>
-        <br>
-        <br>
-        <span property="skos:scopeNote">An <a href="#SOSAActuation">Actuation</a> concerns a single <a
-                href="#SOSAProperty">Property</a> of a single <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
-            Changes to multiple properties, or other combinations of Actuations, may be described in an
-            <a href="#SOSAActuationCollection">ActuationCollection</a>.
-            <br>
-            <br>
+        <p>
+            <em property="rdfs:label">Actuation</em> -
+            <span property="skos:definition">An <a href="#SOSAActuation">Actuation</a> carries out an
+                (Actuation) <a href="#SOSAProcedure">Procedure</a> to change the value of a <a
+                    href="#SOSAProperty">Property</a> using an <a href="#SOSAActuator">Actuator</a>.
+                <br>
+                <br>
+                In this context,
+                <br>
+                - <a href="#SOSAhasResult">hasResult</a> shall indicate the expected value of the <a
+                    href="#SOSAProperty">Property</a> at the completion of the <a href="#SOSAActuation">Actuation</a>
+            </span>
+        </p>
+        <p>
+            <span property="rdfs:comment"><a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be
+                used to link to an associated <a href="#SOSAObservation">Observation</a> or <a
+                    href="#SOSAObservationCollection">ObservationCollection</a> that monitors the actuated
+                property to verify that the result value has been obtained</span>
+        </p>
+        <p>
+            <span property="skos:scopeNote">An <a href="#SOSAActuation">Actuation</a> concerns a single <a
+                    href="#SOSAProperty">Property</a> of a single <a
+                    href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
+                Changes to multiple properties, or other combinations of Actuations, may be described in an
+                <a href="#SOSAActuationCollection">ActuationCollection</a>.
+        </p>
+        <p>
             Alternatively, applications may choose to encapsulate complexity by defining a complex property with
             multiple individual components, and a corresponding complex result (e.g. a vector). This approach is not
             prohibited by the SSN Ontology, but the details are beyond the scope of SSN.</span>
-        <br>
-        <span property="skos:note"><a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be used
-            to link to an associated <a href="#SOSAObservation">Observation</a> or <a
-                href="#SOSAActuationCollection">ObservationCollection</a> that monitors the actuated
-            property to verify that the result value has been obtained..
-        </span>
+        </p>
+        <p>
+            <span property="skos:note"><a href="#SOSArelatedObservation">relatedObservation</a> SHOULD be used
+                to link to an associated <a href="#SOSAObservation">Observation</a> or <a
+                    href="#SOSAActuationCollection">ObservationCollection</a> that monitors the actuated
+                property to verify that the result value has been obtained..
+            </span>
+        </p>
+        <p class="note"> The different time-properties on a <a href="#SOSAActuation">sosa:Actuation</a> support
+            the description of plans, forecasts and predictions as well as descriptions of various historical
+            scenarios.
+            See <a href="#times">Temporal properties</a> for patterns related to these.</p>
 
         <table>
             <tbody>
@@ -344,11 +351,16 @@
         <h5><a href="#SOSAActuator">sosa:Actuator</a></h5>
         <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuator</p>
         <p><strong>an OWL Class</strong></p>
+        <p>
+            <em property="rdfs:label">Actuator</em> -
+            <span property="skos:definition">A device or system that is used by, or implements, an (Actuation) <a
+                    href="#SOSAProcedure">Procedure</a> that changes the value of a <a
+                    href="#SOSAProperty">Property</a></span> <br>
+        </p>
+        <p class="note">An Actuator may have a geographic location. See <a
+                href="#systems-platforms-deployments">Location and Geometry</a> for
+            patterns to describe this.</p>
 
-        <em property="rdfs:label">Actuator</em> -
-        <span property="skos:definition">A device or system that is used by, or implements, an (Actuation) <a
-                href="#SOSAProcedure">Procedure</a> that changes the value of a <a
-                href="#SOSAProperty">Property</a></span> <br>
         <table>
             <tbody>
                 <tr>
@@ -428,11 +440,12 @@
         <p><strong>an OWL Object Property</strong></p>
         <p class="note">actsOn added in 2024 update.
             This term is non-normative, pending further implementation experience</p>
-
-        <em property="rdfs:label">acts on</em> -
-        <span property="skos:definition">Relation between an
-            <a href="#SOSAActuator">Actuator</a> and a
-            <a href="#SOSAProperty">Property</a> whose state may be changed by using it.</span> <br>
+        <p>
+            <em property="rdfs:label">acts on</em> -
+            <span property="skos:definition">Relation between an
+                <a href="#SOSAActuator">Actuator</a> and a
+                <a href="#SOSAProperty">Property</a> whose state may be changed by using it.</span>
+        </p>
         <table>
             <tbody>
                 <tr>
@@ -485,11 +498,11 @@
                 href="#SOSAactsOnProperty">sosa:actsOnProperty</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2024 edition.
         </p>
-
-        <em property="rdfs:label">acts on property</em> -
-        <span property="skos:definition">Relation between an <a href="#SOSAActuation">Actuation</a> and the
-            <a href="#SOSAProperty">sosa:Property</a> it acted upon.</span>
-        <br>
+        <p>
+            <em property="rdfs:label">acts on property</em> -
+            <span property="skos:definition">Relation between an <a href="#SOSAActuation">Actuation</a> and the
+                <a href="#SOSAProperty">sosa:Property</a> it acted upon.</span>
+        </p>
         <table>
             <tbody>
                 <tr>
@@ -548,11 +561,12 @@
                 href="#SOSAisActedOnBy">sosa:isActedOnBy</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2024 edition.
         </p>
-
-        <em property="rdfs:label">is acted on by</em> -
-        <span property="skos:definition">Relation between a
-            <a href="#SOSAProperty">Property</a> and an
-            <a href="#SOSAActuator">Actuator</a> that may change its state.</span> <br>
+        <p>
+            <em property="rdfs:label">is acted on by</em> -
+            <span property="skos:definition">Relation between a
+                <a href="#SOSAProperty">Property</a> and an
+                <a href="#SOSAActuator">Actuator</a> that may change its state.</span>
+        </p>
         <table>
             <tbody>
                 <tr>
@@ -594,10 +608,11 @@
         <h5><a href="#SOSAmadeActuation">sosa:madeActuation</a></h5>
         <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeActuation</p>
         <p><strong>an OWL Object Property</strong></p>
-
-        <em property="rdfs:label">made actuation</em> -
-        <span property="skos:definition">Relation between an <a href="#SOSAActuator">Actuator</a> and an
-            <a href="#SOSAActuation">Actuation</a> made it.</span> <br>
+        <p>
+            <em property="rdfs:label">made actuation</em> -
+            <span property="skos:definition">Relation between an <a href="#SOSAActuator">Actuator</a> and an
+                <a href="#SOSAActuation">Actuation</a> made it.</span>
+        </p>
         <table>
             <tbody>
                 <tr class="ssn">
@@ -653,11 +668,11 @@
         <h5><a href="#SOSAmadeByActuator">sosa:madeByActuator</a></h5>
         <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeByActuator</p>
         <p><strong>an OWL Object Property</strong></p>
-
-        <em property="rdfs:label">made by actuator</em> -
-        <span property="skos:definition">Relation linking an <a href="#SOSAActuation">Actuation</a> to the
-            <a href="#SOSAActuator">Actuator</a> that made it.</span>
-        <br>
+        <p>
+            <em property="rdfs:label">made by actuator</em> -
+            <span property="skos:definition">Relation linking an <a href="#SOSAActuation">Actuation</a> to the
+                <a href="#SOSAActuator">Actuator</a> that made it.</span>
+        </p>
         <table>
             <tbody>
                 <tr class="ssn">
@@ -716,12 +731,12 @@
 
         <p class="note">wasActedOnBy added in 2024 update.
             This term is non-normative, pending further implementation experience</p>
-
-        <em property="rdfs:label">was acted on by</em> -
-        <span property="skos:definition">Relation between a
-            <a href="#SOSAProperty">sosa:Property</a> and an
-            <a href="#SOSAActuation">Actuation</a> that changed its state.</span>
-        <br>
+        <p>
+            <em property="rdfs:label">was acted on by</em> -
+            <span property="skos:definition">Relation between a
+                <a href="#SOSAProperty">sosa:Property</a> and an
+                <a href="#SOSAActuation">Actuation</a> that changed its state.</span>
+        </p>
         <table>
             <tbody>
                 <tr>

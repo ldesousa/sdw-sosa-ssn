@@ -207,29 +207,29 @@
   </section>
 
   <section id="ModelPatterns" class="informative">
-    <h2>Common Modeling Questions</h2>
+    <h2>Common Patterns</h2>
+
     <p>
-      This section discusses how to handle common modeling questions such as locations, forecasts, and
-      quantity values with a unit of measure.
+      This section discusses how to handle some common modeling questions.
     </p>
-
-    <section id="location" data-include="./chapters/ModelLocation.html"></section>
-
-    <section id="forecasts" data-include="./chapters/ModelForecast.html"></section>
 
     <section id="uom" data-include="./chapters/ModelQuantity.html"></section>
 
     <section id="model-domain" data-include="./chapters/ModelDomainTypes.html"></section>
 
-    <section id="property-instances" data-include="./chapters/ModelPropertyInstance.html"></section>
-
-    <section id="ComplexSystems" data-include="./chapters/ModelComplexSystem.html"></section>
-
-    <section id="SystemType" data-include="./chapters/ModelSystemType.html"></section>
-
-    <section id="ultimate-FoI" data-include="./chapters/ModeluFOI.html"></section>
+    <section id="ultimate-FoI" data-include="./chapters/ModelFOI.html"></section>
 
     <section id="sample-chains" data-include="./chapters/ModelSampleChains.html"></section>
+
+    <section id="location-geometry" data-include="./chapters/ModelLocation.html"></section>
+
+    <section id="times" data-include="./chapters/ModelTimes.html"></section>
+
+    <section id="property-definition" data-include="./chapters/ModelPropertyDefinition.html"></section>
+
+    <section id="complex-systems" data-include="./chapters/ModelComplexSystem.html"></section>
+
+    <section id="system-type" data-include="./chapters/ModelSystemType.html"></section>
 
     <section id="observation-collection" data-include="./chapters/ModelObservationCollection.html">
     </section>
@@ -531,6 +531,42 @@
         <pre class="example" data-include="./rdf/examples/2017ex25.ttl" data-include-format="text"></pre>
       </div>
     </section>
+
+    <section id="InkBird-IBS-TH2">
+      <h3>InkBird IBS TH2 Sensor</h3>
+      <div>
+        <p>These examples describe a commercially available platform, the IBS TH2, marketed under the InkBird brand.</p>
+
+        <h4>Recording survival and operating ranges for a sensor</h4>
+
+        <p>In this example we represent the capability of the platform temperature sensor to measure ambient air and the
+          physical
+          survival limits of its plastic construction. Note that this should apply to the platform as well, but in
+          SOSA/SSN survival ranges only
+          apply to sensors and systems, not platforms.</p>
+
+        <p>xsd:minInclusive and xsd:maxInclusive are used to report the maximum and minimum operating and survival
+          ranges for the
+          sensor. These are simple properties that are not encoded here as ontological restrictions on observation
+          results. Besides the fact that these
+          ranges apply to the sensor type and not the sensor instance, it is often necessary to report
+          out-of-range values to record the occurrence of an operating condition leading to failure. It should also be
+          noted that
+          system lifespan can exceed the specification. The Voyager 2 spacecraft is a well know example: designed to
+          function for 5
+          years, it is still partially operational after 43 years.</p>
+
+        <p>An RDF file containing a <a
+            href="https://github.com/w3c/sdw/blob/gh-pages/sdw-sosa-ssn/ssn/rdf/examples/InkBird-IBS-TH2-Range.ttl">graph
+            corresponding to this example is available</a>. </p>
+        <pre class="example" data-include="./rdf/examples/InkBird-IBS-TH2-Range.ttl" data-include-format="text"></pre>
+      </div>
+    </section>
+
+
+
+
+
   </section>
 
   <section class="appendix" id="origins" data-include="./chapters/Origins.html"></section>
@@ -586,7 +622,7 @@
       <li>add inverses for all object-properties, add tabulation of all properties</li>
       <li>Add madeBySystem, madeExecution </li>
       <li>Add explanation of how domain types relate to feature-of-interest; remove Sample is subclass of
-        FeatureOfInterest axiom
+        FeatureOfInterest axiom</li>
       <li>Add SamplingCollection to provide mechanism for grouping sets of Samplings with common properties</li>
       <li>Deprecate ActuatableProperty, ObservableProperty in favour of generic Property</li>
       <li>Clarify type-vs-instance for Systems; add examples in Common Modeling patterns.</li>

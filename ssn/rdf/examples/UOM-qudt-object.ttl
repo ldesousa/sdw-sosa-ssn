@@ -22,3 +22,6 @@ ex:Obs83985
       qudt:value 22.4 ;
     ] ;
 .
+unit:DEG_C 
+  a qudt:Unit ;
+.

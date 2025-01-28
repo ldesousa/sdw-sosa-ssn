@@ -11,7 +11,6 @@ ex:Obs234534
   sosa:hasFeatureOfInterest ex:apt134 ;
   sosa:hasSimpleResult "-29.9"^^unit:DEG_C ;
 .
-unit:DEG_C
-  a qudt:Unit ;
-  rdfs:subClassOf xsd:decimal ;
+unit:DEG_C 
+  a rdfs:Datatype ;
 .

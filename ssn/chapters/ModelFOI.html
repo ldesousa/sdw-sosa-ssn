@@ -1,0 +1,56 @@
+<h3>Proximate and Ultimate feature of interest</h3>
+<p>
+    The object of the
+    <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a> property of an <a href="#SOSAExecution">Execution</a>
+    (i.e Actuation, Observation,
+    or Sampling) is the <i>immediate</i> or <i>proximate</i> <a
+        href="https://www.w3.org/TR/vocab-ssn/#SOSAFeatureOfInterest">FeatureOfInterest</a>.
+    For example, <a href="#open-window"></a> shows a description of a simple actuation to open a window.
+</p>
+<figure id="open-window">
+    <img alt="Observation feature-of-interest patterns 1" src="./images/open-window.png" style="width:75%" />
+    <figcaption>
+        Simple Actuation to open a window.
+        <br>
+        <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
+    </figcaption>
+</figure>
+<pre class="example" data-include="./rdf/examples/open-window.ttl" data-include-format="text"></pre>
+
+<p>
+    In some cases the feature-of-interest of the execution is not the the ultimate thing that the act of actuation,
+    observation, or sampling is concerned with, but is an intermediate thing.
+    This might be a <i>sample</i> of the ultimate feature of interest, or perhaps a sample of a sample, etc.
+    The relationship between the proximate and ultimate feature of interest might be specified, such as a
+    sampling-chain.
+    If this relationship is recorded, then an ultimate feature of interest might be inferred.
+    Nevertheless it is often the ultimate feature of interest that really matters to the data user, particularly for
+    discovery purposes.
+    This requirement is met using the <a href="#SOSAhasUltimateFeatureOfInterest">hasUltimateFeatureOfInterest</a>
+    property</a>.
+</p>
+<p>
+    Some patterns for the relationship of the ultimate feature of interest to observations
+    (<a href="#fig-observation-ultimate-foi"></a>) and acts of sampling
+    (<a href="#fig-sampling-ultimate-foi"></a>), and within sampling-chains, are illustrated below.
+</p>
+
+<figure id="fig-observation-ultimate-foi">
+    <img alt="Observation feature-of-interest patterns 1" src="./images/obs-foi-pattern.png" style="width:75%" />
+    <figcaption>
+        Patterns for observations that relate to the ultimate feature of interest directly (top),
+        or indirectly via one sample (middle) or a chain of samples (bottom)
+        <br>
+        <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
+    </figcaption>
+</figure>
+
+<figure id="fig-sampling-ultimate-foi">
+    <img alt="Sampling feature-of-interest patterns 2" src="./images/sam-foi-pattern.png" style="width:75%" />
+    <figcaption>
+        Patterns for sampling that relate to the ultimate feature of interest directly (top),
+        or indirectly via one intermediate sample (middle) or a chain of intermediate samples (bottom)
+        <br>
+        <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
+    </figcaption>
+</figure>

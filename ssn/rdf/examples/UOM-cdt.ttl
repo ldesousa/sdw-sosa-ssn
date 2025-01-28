@@ -8,3 +8,6 @@ ex:Obs234534
   sosa:hasFeatureOfInterest ex:apt134 ;
   sosa:hasSimpleResult "-29.9 Cel"^^cdt:ucum ;
 .
+cdt:ucum 
+  a rdfs:Datatype ;
+.
