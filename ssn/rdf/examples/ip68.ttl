@@ -1,5 +1,6 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix schema: <http://schema.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
