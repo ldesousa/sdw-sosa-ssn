@@ -1,7 +1,8 @@
 <h3>Proximate and Ultimate feature of interest</h3>
 <p>
     The object of the
-    <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a> property of an Execution (i.e Actuation, Observation,
+    <a href="#SOSAhasFeatureOfInterest">hasFeatureOfInterest</a> property of an <a href="#SOSAExecution">Execution</a>
+    (i.e Actuation, Observation,
     or Sampling) is the <i>immediate</i> or <i>proximate</i> <a
         href="https://www.w3.org/TR/vocab-ssn/#SOSAFeatureOfInterest">FeatureOfInterest</a>.
     For example, <a href="#open-window"></a> shows a description of a simple actuation to open a window.
@@ -17,14 +18,14 @@
 <pre class="example" data-include="./rdf/examples/open-window.ttl" data-include-format="text"></pre>
 
 <p>
-    In some cases the feature-of-interest of the execution is not the the ultimate thing that the act of observation,
-    sampling, or actuation is concerned with, but is an intermediate thing.
-    This is often a <i>sample</i> of the ultimate feature of interest, or perhaps a sample of a sample, etc.
-    There may be a specified relationship between the proximate and ultimate feature of interest, such as a
+    In some cases the feature-of-interest of the execution is not the the ultimate thing that the act of actuation,
+    observation, or sampling is concerned with, but is an intermediate thing.
+    This might be a <i>sample</i> of the ultimate feature of interest, or perhaps a sample of a sample, etc.
+    The relationship between the proximate and ultimate feature of interest might be specified, such as a
     sampling-chain.
     If this relationship is recorded, then an ultimate feature of interest might be inferred.
-    Nevertheless, particularly for discovery purposes, it is usually the ultimate feature of interest that really
-    matters to the data user.
+    Nevertheless it is often the ultimate feature of interest that really matters to the data user, particularly for
+    discovery purposes.
     This requirement is met using the <a href="#SOSAhasUltimateFeatureOfInterest">hasUltimateFeatureOfInterest</a>
     property</a>.
 </p>
