@@ -1,7 +1,7 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
 <feature/EarthAtmosphere_StE> a sosa:Sample ;
   sosa:isSampleOf <feature/EarthAtmosphere> ;

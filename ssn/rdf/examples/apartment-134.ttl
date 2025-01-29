@@ -1,11 +1,11 @@
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
-@base <http://example.org/data/apt134/> .
+@base <https://example.org/data/apt134/> .
 
 # The electric consumption of apartment #134 on April 15 2017 was 22.4 kWh as 
 # observed by sensor #926. The result was available 12 seconds later

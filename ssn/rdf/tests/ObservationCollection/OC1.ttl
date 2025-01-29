@@ -9,7 +9,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 
 ex:OC1
   a sosa:ObservationCollection ;

@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
@@ -12,7 +12,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix rdfp: <https://w3id.org/rdfp/>.
-@base <http://example.org/data/dht22/> .
+@base <https://example.org/data/dht22/> .
 
 ex:DHT22_Procedure a sosa:Procedure ;
   sosa:hasOutput ex:DHT22_output ;

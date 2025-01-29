@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
@@ -10,7 +10,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/data/htemp/> .
+@base <https://example.org/data/htemp/> .
 
 ex:T99 a sosa:Sensor , ex:Mercury-in-glass-thermometer ;
   rdfs:label "Mercury in glass thermometer #99"@en ;

@@ -1,10 +1,10 @@
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#>.
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/data/smiley/> .
+@base <https://example.org/data/smiley/> .
 
 # Determing the color of a smiley face sticker, including sampling from a population of smiley stickers
 

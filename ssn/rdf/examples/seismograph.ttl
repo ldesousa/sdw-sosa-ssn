@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
@@ -8,7 +8,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/data/seis/> .
+@base <https://example.org/data/seis/> .
 
 # Observation #358 of seismograph VCAB DP1 BP 40 (Vineyard Canyon, Parkfield, Ca) measured
 # a earth displacement speed of 0.000500 cm/sec at 8:23 am on April 18, 2017, Pacific

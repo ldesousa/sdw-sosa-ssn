@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 

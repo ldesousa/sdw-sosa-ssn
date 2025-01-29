@@ -8,7 +8,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
 
 <Room145> a sosa:FeatureOfInterest ;

@@ -5,13 +5,13 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix schema: <http://schema.org/>.
 
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 
 @prefix rdfp: <https://w3id.org/rdfp/>.
 
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
 
 <DHT22#Procedure> a sosa:Procedure ;

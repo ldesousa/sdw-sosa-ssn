@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -6,7 +6,7 @@
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
-@base <http://example.org/data/tree/> .
+@base <https://example.org/data/tree/> .
 
 # rangefinder #30 is a laser range finder sensor that was used 
 # to observe the height of tree #124 and #125

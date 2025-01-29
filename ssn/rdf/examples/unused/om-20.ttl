@@ -1,5 +1,5 @@
-# baseURI: http://example.org/om-20
-# imports: http://example.org/geosparql
+# baseURI: https://example.org/om-20
+# imports: https://example.org/geosparql
 # imports: http://qudt.org/2.0/schema/qudt
 # imports: http://www.w3.org/2006/time
 # imports: http://www.w3.org/ns/prov-o#
@@ -7,7 +7,7 @@
 # imports: http://www.w3.org/ns/ssn/
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix examples: <http://example.org/www.w3.org/ns/sosa/examples#> .
+@prefix examples: <https://example.org/www.w3.org/ns/sosa/examples#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -21,14 +21,14 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/om-20>
+<https://example.org/om-20>
   rdf:type owl:Ontology ;
   dcterms:created "2017-06-06"^^xsd:date ;
   dcterms:creator <http://people.csiro.au/Simon-Cox> ;
   dcterms:modified "2017-06-07" ;
   rdfs:comment "SOSA/SSN examples matching the ones found in Annex C of OMXML 2.0" ;
   rdfs:seeAlso <http://portal.opengeospatial.org/files/?artifact_id=41510> ;
-  owl:imports <http://example.org/geosparql> ;
+  owl:imports <https://example.org/geosparql> ;
   owl:imports <http://qudt.org/2.0/schema/qudt> ;
   owl:imports <http://www.w3.org/2006/time> ;
   owl:imports <http://www.w3.org/ns/prov-o#> ;
@@ -70,7 +70,7 @@ examples:O35235
   rdfs:label "Weather Data" ;
   sosa:hasFeatureOfInterest <http://www.ga.gov.au/bin/gazd01?rec=293604> ;
   sosa:hasResult examples:DA3464 ;
-  sosa:observedProperty <http://example.org/weather1.xml> ;
+  sosa:observedProperty <https://example.org/weather1.xml> ;
   sosa:phenomenonTime examples:TP2523 ;
   sosa:resultTime "2007-04-01T03:40:00.000-06:00"^^xsd:dateTime ;
   sosa:usedProcedure <urn:vast:sensor:weatherStation> ;

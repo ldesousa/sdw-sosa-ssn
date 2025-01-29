@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
  <COPR> a sosa:FeatureOfInterest ; 
    sosa:hasSample <COPR_Station_Location> ;

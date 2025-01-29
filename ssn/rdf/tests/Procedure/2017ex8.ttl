@@ -6,7 +6,7 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
 # The barometric readings from a Bosch Sensortec BMP282 sensor in an Apple IPhone 7
 # observed on June 6 2017 using only the SOSA core for modelling.

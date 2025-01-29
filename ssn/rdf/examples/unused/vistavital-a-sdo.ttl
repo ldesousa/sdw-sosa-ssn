@@ -1,4 +1,4 @@
-# baseURI: http://example.org/vistavital-a
+# baseURI: https://example.org/vistavital-a
 # imports: http://www.w3.org/2006/time
 # imports: http://www.w3.org/ns/prov-o#
 # imports: http://www.w3.org/ns/ssn/
@@ -6,7 +6,7 @@
 # prefix: vistavital-a
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,7 +14,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix vistavital-a: <http://example.org/vistavital-a#> .
+@prefix vistavital-a: <https://example.org/vistavital-a#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:entered-by
@@ -86,18 +86,18 @@ The example data comes from the Vista example developed by Rafael Richards - see
 .
 vistavital-a:Observation_1_ex
   rdf:type sosa:Observation ;
-  ex:entered-by <http://example.org/NEW-PERSON/NOTHER,NADA> ;
-  ex:error-entered-by <http://example.org/NEW-PERSON/MANAGER,SYSTEM> ;
+  ex:entered-by <https://example.org/NEW-PERSON/NOTHER,NADA> ;
+  ex:error-entered-by <https://example.org/NEW-PERSON/MANAGER,SYSTEM> ;
   schema:status "error" ;
   rdfs:comment "Example of how to encode a Vital Signs measurement comparable to Vista example" ;
   rdfs:comment "This version uses schema.org and prov for elements not available in SOSA, with some locally defined specializations of prov Associations to formally bind roles to simple properties" ;
   rdfs:label "Example BP measurement" ;
   rdfs:seeAlso <https://github.com/vistadataproject/documents/blob/master/Background/presentations/pdf/2014-Linked_Vitals-Linked_Data_Linked_FHIR.pdf> ;
-  prov:atLocation <http://example.org/HOSPITAL-LOCATION/4-SOUTH-MED> ;
-  sosa:hasFeatureOfInterest <http://example.org/patient/jones-christopher> ;
+  prov:atLocation <https://example.org/HOSPITAL-LOCATION/4-SOUTH-MED> ;
+  sosa:hasFeatureOfInterest <https://example.org/patient/jones-christopher> ;
   sosa:hasResult "150/10" ;
   sosa:observedProperty <VA:4500634> ;
-  sosa:observedProperty <http://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
+  sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
       rdf:type time:Instant ;
       time:inXSDDateTime "2005-09-01T13:00:00Z"^^xsd:dateTime ;
@@ -111,10 +111,10 @@ vistavital-a:Observation_1_prov
   rdfs:comment "This version uses prov for elements not included in SOSA" ;
   rdfs:label "Example BP measurement" ;
   rdfs:seeAlso <https://github.com/vistadataproject/documents/blob/master/Background/presentations/pdf/2014-Linked_Vitals-Linked_Data_Linked_FHIR.pdf> ;
-  prov:atLocation <http://example.org/HOSPITAL-LOCATION/4-SOUTH-MED> ;
+  prov:atLocation <https://example.org/HOSPITAL-LOCATION/4-SOUTH-MED> ;
   prov:qualifiedAssociation [
       rdf:type prov:Association ;
-      prov:agent <http://example.org/NEW-PERSON/MANAGER,SYSTEM> ;
+      prov:agent <https://example.org/NEW-PERSON/MANAGER,SYSTEM> ;
       prov:hadRole [
           rdf:type prov:Role ;
           rdfs:label "Error entered by" ;
@@ -122,16 +122,16 @@ vistavital-a:Observation_1_prov
     ] ;
   prov:qualifiedAssociation [
       rdf:type prov:Association ;
-      prov:agent <http://example.org/NEW-PERSON/NOTHER,NADA> ;
+      prov:agent <https://example.org/NEW-PERSON/NOTHER,NADA> ;
       prov:hadRole [
           rdf:type prov:Role ;
           rdfs:label "Entered by" ;
         ] ;
     ] ;
-  sosa:hasFeatureOfInterest <http://example.org/patient/jones-christopher> ;
+  sosa:hasFeatureOfInterest <https://example.org/patient/jones-christopher> ;
   sosa:hasResult "150/10" ;
   sosa:observedProperty <VA:4500634> ;
-  sosa:observedProperty <http://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
+  sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
       rdf:type time:Instant ;
       time:inXSDDateTime "2005-09-01T13:00:00Z"^^xsd:dateTime ;
@@ -140,18 +140,18 @@ vistavital-a:Observation_1_prov
 .
 vistavital-a:Observation_1_sdo
   rdf:type sosa:Observation ;
-  schema:agent <http://example.org/NEW-PERSON/NOTHER,NADA> ;
-  schema:location <http://example.org/HOSPITAL-LOCATION/4-SOUTH-MED> ;
-  schema:participant <http://example.org/NEW-PERSON/MANAGER,SYSTEM> ;
+  schema:agent <https://example.org/NEW-PERSON/NOTHER,NADA> ;
+  schema:location <https://example.org/HOSPITAL-LOCATION/4-SOUTH-MED> ;
+  schema:participant <https://example.org/NEW-PERSON/MANAGER,SYSTEM> ;
   schema:status "error" ;
   rdfs:comment "Example of how to encode a Vital Signs measurement comparable to Vista example" ;
   rdfs:comment "This version uses schema.org elements for elements not part of SOSA" ;
   rdfs:label "Example BP measurement" ;
   rdfs:seeAlso <https://github.com/vistadataproject/documents/blob/master/Background/presentations/pdf/2014-Linked_Vitals-Linked_Data_Linked_FHIR.pdf> ;
-  sosa:hasFeatureOfInterest <http://example.org/patient/jones-christopher> ;
+  sosa:hasFeatureOfInterest <https://example.org/patient/jones-christopher> ;
   sosa:hasResult "150/10" ;
   sosa:observedProperty <VA:4500634> ;
-  sosa:observedProperty <http://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
+  sosa:observedProperty <https://example.org/GMRV-VITAL-TYPE/BLOOD-PRESSURE> ;
   sosa:phenomenonTime [
       rdf:type time:Instant ;
       time:inXSDDateTime "2005-09-01T13:00:00Z"^^xsd:dateTime ;

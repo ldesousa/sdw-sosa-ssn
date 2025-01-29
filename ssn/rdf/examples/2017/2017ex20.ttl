@@ -3,7 +3,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
 
 # The CO2 level observed in an ice core is 240 parts per million.

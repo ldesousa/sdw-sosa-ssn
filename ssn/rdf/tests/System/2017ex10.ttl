@@ -5,7 +5,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
 # The electric consumption of apartment #134 on April 15 2017 was 22.4 kWh as 
 # observed by sensor #926. The result was available 12 seconds later.

@@ -4,7 +4,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
-@base <http://example.org/data/> .
+@base <https://example.org/data/> .
 
 # rangefinder #30 is a laser range finder sensor that was used 
 # to observe the height of tree #124 and #125.

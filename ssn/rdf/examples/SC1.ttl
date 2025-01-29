@@ -1,5 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ex: <http://example.org/data/> .
+@prefix ex: <https://example.org/data/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix orcid: <http://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,7 +9,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/data/SC1/> .
+@base <https://example.org/data/SC1/> .
 
 ex:SC1
   a sosa:SampleCollection ;
