@@ -1,36 +1,43 @@
+@prefix ex: <http://example.org/data/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
-@base <http://example.org/data/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.org/data/seis/> .
 
 # Observation #358 of seismograph VCAB DP1 BP 40 (Vineyard Canyon, Parkfield, Ca) measured
 # a earth displacement speed of 0.000500 cm/sec at 8:23 am on April 18, 2017, Pacific
 # Daylight Time.
 
-<VCAB-DP1-BP-40> a sosa:Sensor ;
+ex:VCAB-DP1-BP-40 a sosa:Sensor ;
   rdfs:label "seismograph VCAB DP1 BP 40 (Vineyard Canyon, Parkfield, Ca)"@en ;
   rdfs:seeAlso <https://earthquake.usgs.gov/monitoring/seismograms/153> ;
-  sosa:observes <VCAB-DP1-BP-40#groundDisplacementSpeed> .
+  sosa:observes ex:groundDisplacementSpeed .
 
-<VCAB-DP1-BP-40#location> a sosa:Sample ;
+ex:VCAB-DP1-BP-40_location a sosa:Sample ;
   rdfs:label "location of VCAB-DP1-BP-40"@en ;
-  geo:lat 35.8648067 ;
-  geo:long -120.6195831 ;
-  geo:alt 12.75 ;
-  sosa:isSampleOf <earth> .
+  geo:hasGeometry [ 
+    a geo:Point ;
+    geo:asWKT "POINT (-120.6195831 35.8648067)"^^geo:WktLiteral ;
+  ] ;
+  sosa:isSampleOf <https://www.wikidata.org/wiki/Q2> .
 
-<groundDisplacementSpeed> a sosa:Property ;
-  rdfs:label "the ground displacement speed at location of VCAB-DP1-BP-40"@en ;
-  sosa:isObservedBy <VCAB-DP1-BP-40> .
+<https://www.wikidata.org/wiki/Q2> a sosa:FeatureOfInterest ;
+  rdfs:label "Earth" .
 
-<VCAB-DP1-BP-40?t=2017-04-18T08%3A23%3A00-07%3A00> a sosa:Observation ;
-  sosa:madeBySensor <VCAB-DP1-BP-40> ; 
-  sosa:hasFeatureOfInterest  <VCAB-DP1-BP-40#location> ;
-  sosa:observedProperty  <groundDisplacementSpeed> ;
+ex:groundDisplacementSpeed a sosa:Property ;
+  rdfs:label "ground displacement speed"@en ;
+  skos:broader qk:Speed .
+
+ex:VCAB-DP1-BP-40_t2017-04-18T08%3A23%3A00-07%3A00 a sosa:Observation ;
+  sosa:madeBySensor ex:VCAB-DP1-BP-40 ; 
+  sosa:hasFeatureOfInterest ex:VCAB-DP1-BP-40_location ;
+  sosa:observedProperty ex:groundDisplacementSpeed ;
   sosa:hasResult [
      rdf:type qudt:QuantityValue ;
      qudt:numericValue "5e-4"^^xsd:double ;
