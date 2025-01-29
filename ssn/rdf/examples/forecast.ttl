@@ -5,11 +5,11 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://example.org/data/> .
+@base <http://example.org/data/forecast/> .
 
 ex:Observation299876
   a sosa:Observation ;
-  sosa:hasFeatureOfInterest <feature/EarthAtmosphere> ;
+  sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
   sosa:hasResult <grid/299876> ;
   sosa:observedProperty <https://si-digital-framework.org/quantities/TEMC> ;
   sosa:phenomenonTime [
@@ -23,4 +23,6 @@ ex:Observation299876
   sosa:resultTime "2024-03-06T12:00:00+10:00"^^xsd:dateTime ;
 .
 
-
+ex:EarthAtmosphere a sosa:FeatureOfInterest ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
+. 

@@ -7,14 +7,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @base <http://example.org/data/htemp/> .
 
 ex:T99 a sosa:Sensor , ex:Mercury-in-glass-thermometer ;
   rdfs:label "Mercury in glass thermometer #99"@en ;
-  sosa:observes ex:temperature .
-
+  sosa:observes ex:temperature ;
+.
 ex:SHW a sosa:Platform , sosa:FeatureOfInterest;
   rdfs:label "Station Hohe Warte"@en ;
   geo:hasGeometry [ 
@@ -23,15 +24,14 @@ ex:SHW a sosa:Platform , sosa:FeatureOfInterest;
   ] ;
   sosa:hosts ex:T99 ;
 .
-
 ex:airTemperature a sosa:Property ;
   rdfs:label "ground displacement speed"@en ;
   sosa:isPropertyOf ex:EarthAtmosphere ;
-  skos:broader qk:Temperature .
-
+  skos:broader qk:Temperature ;
+.
 ex:EarthAtmosphere a sosa:FeatureOfInterest ;
-  owl:sameAs <https://www.wikidata.org/wiki/Q3230> . 
-
+  owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
+. 
 ex:SHW_T_1872-04-04T15 a sosa:Observation ;
   sosa:madeBySensor ex:T99 ; 
   sosa:hasFeatureOfInterest ex:SHW ;
@@ -43,4 +43,5 @@ ex:SHW_T_1872-04-04T15 a sosa:Observation ;
      rdf:type qudt:QuantityValue ;
      qudt:numericValue "22.5"^^xsd:decimal ;
      qudt:hasUnit unit:DEG_C ] ;
-  sosa:resultTime "1872-04-04T15:00:00+01:00"^^xsd:dateTime .
+  sosa:resultTime "1872-04-04T15:00:00+01:00"^^xsd:dateTime ;
+.

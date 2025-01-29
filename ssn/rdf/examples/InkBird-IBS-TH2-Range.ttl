@@ -19,25 +19,26 @@ ex:InkBird-IBS-TH2 a owl:Class;
     rdfs:label "Inkbird IBS-TH2"@en ;
     rdfs:subClassOf gs1:Product, sosa:Platform, equipment:Equipment, <https://w3id.org/seas/BluetoothCommunicationDevice>;
     gs1:pip <https://inkbird.com/products/hygrometer-ibs-th2> ;
-    sosa:hosts ex:IBSTH2TemperatureSensor .
-
+    sosa:hosts ex:IBSTH2TemperatureSensor ;
+.
 ex:IBSTH2TemperatureSensor rdfs:subClassOf sosa:Sensor ;
     rdfs:label "Inkbird IBS-TH2 built-in Temperature Sensor"@en ;
     sosa:observes ex:airTemperature ;
     system:hasOperatingRange ex:IBSTH2TemperatureSensorLimits ;
-    system:hasSurvivalRange ex:IBSTH2SurvivalRange .
-
+    system:hasSurvivalRange ex:IBSTH2SurvivalRange ;
+.
 ex:IBSTH2TemperatureSensorLimits a system:OperatingRange ;
     sosa:forProperty qk:Temperature ;
     qudt:unit unit:DEG_C ;
     xsd:maxInclusive "60" ;
     xsd:minInclusive "-40" ;
-    rdfs:label "Inkbird IBS-TH2 Temperature Sensor Limits"@en .
-
+    rdfs:label "Inkbird IBS-TH2 Temperature Sensor Limits"@en ;
+.
 # Physical limits of the sensor (and platform) where structural failure occurs.
 ex:IBSTH2SurvivalRange a system:SurvivalRange ;
     sosa:forProperty qk:Temperature ;
     qudt:unit unit:DEG_C ;
     xsd:maxInclusive "80" ;
     xsd:minInclusive "-273" ;
-    rdfs:label "Inkbird IBS-TH2 Failiure limits"@en .
+    rdfs:label "Inkbird IBS-TH2 Failiure limits"@en ;
+.

@@ -12,7 +12,7 @@ ex:IBS-TH2-56
         a geo:Point ;
         geo:asWKT "POINT (-73.877244 45.511672)"^^geo:WktLiteral ;
     ] ;
-  . 
+. 
 ex:serialNumber a rdfs:Datatype ;
     rdfs:subClassOf xsd:string ;
 .

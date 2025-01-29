@@ -9,7 +9,7 @@
 @base <http://example.org/data/sunspot/> .
 
 # The result of an observation of the sunspot number is available a few minutes 
-# after the phenomenon time, due to the light travel duration.
+# after the phenomenon time, due to the light travel duration
 
 <Observation/7536> rdf:type sosa:Observation ;
   sosa:observedProperty  ex:sunspotCount ;
@@ -18,11 +18,11 @@
   sosa:phenomenonTime [
     rdf:type time:Instant ;
     time:inXSDDateTimeStamp "2017-03-31T11:51:42+00:00"^^xsd:dateTimeStamp ] ;
-  sosa:resultTime "2017-03-31T12:00:00+00:00"^^xsd:dateTimeStamp .
-
+  sosa:resultTime "2017-03-31T12:00:00+00:00"^^xsd:dateTimeStamp ;
+.
 ex:sunspotCount rdf:type sosa:Property ;
   skos:broader qk:Count ;
 .
-
 <https://www.wikidata.org/wiki/Q525> a sosa:FeatureOfInterest ;
-  rdfs:label "Sun" .
+  rdfs:label "Sun" ;
+.

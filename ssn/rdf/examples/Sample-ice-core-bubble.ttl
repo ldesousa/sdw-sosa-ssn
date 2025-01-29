@@ -41,4 +41,4 @@ ex:Antarctic_ice_sheet a sosa:FeatureOfInterest ;
 . 
 ex:EarthAtmosphere a sosa:FeatureOfInterest ;
   owl:sameAs <https://www.wikidata.org/wiki/Q3230> ;
-  . 
+. 

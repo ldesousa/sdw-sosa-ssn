@@ -58,17 +58,16 @@ ex:IBS-TH2 rdfs:subClassOf sosa:Sensor ;
 
 ex:IBS-TH2-56 
     a ex:IBS-TH2 ;
-    rdfs:label "12gth456a-23190"^^ex:serialNumber ;
-. 
+    rdfs:label "12gth456a-23190"^^ex:serialNumber . 
 
 qk:RelativeHumidity 
     a sosa:Property ;
-    a qudt:QuantityKind ;
-. 
+    a qudt:QuantityKind . 
+
 qk:Temperature 
     a sosa:Property ;
-    a qudt:QuantityKind ;
-. 
+    a qudt:QuantityKind . 
+
 qudt:QuantityKind
     rdfs:subClassOf sosa:Property ;
 .

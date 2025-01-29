@@ -1,5 +1,5 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/data/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix orcid: <http://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,8 +9,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-@prefix ex: <http://example.org/data/> .
+@base <http://example.org/data/SC1/> .
 
 ex:SC1
   a sosa:SampleCollection ;
@@ -74,7 +73,7 @@ ex:examples-collection-sam
   a owl:Ontology ;
   dcterms:created "2023-11-04"^^xsd:date ;
   dcterms:modified "2024-01-22"^^xsd:date ;
-  dcterms:creator <http://orcid.org/0000-0002-3884-3420> ;
+  dcterms:creator orcid:0000-0002-3884-3420 ;
   rdfs:comment "Small dataset to test rules in SOSA Collections" ;
   owl:imports <http://www.w3.org/ns/sosa/> , 
     <http://www.w3.org/2006/time> , 

@@ -4,6 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://example.org/data/geor/> .
 
 ex:ObsGeo1 a sosa:Observation ;
     sosa:madeBySensor ex:MyGPS736   ;
@@ -13,11 +14,11 @@ ex:ObsGeo1 a sosa:Observation ;
     sosa:hasResult [
         a geo:Geometry ;
         geo:asWKT "Point (145.042316 -37.919134)"^^geo:wktLiteral ;
-     ] ;
-.
+     ] .
+     
 ex:MyGPS736 
     a sosa:Sensor ;
-. 
+.
 ex:AbbysCar 
     a sosa:FeatureOfInterest ;
 .
