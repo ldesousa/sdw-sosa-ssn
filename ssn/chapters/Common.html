@@ -80,7 +80,7 @@
             <table class="ssn ssn">
                 <tbody>
                     <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td><span about="sosa:FeatureOfInterest" property="skos:example">When measuring the height of a
                                 tree, the <em>height</em> is the <a href="#SOSAobservedProperty">observedProperty</a>,
                                 <em>20m</em> is the result of the <a href="#SOSAObservation">Observation</a>, and the
@@ -155,27 +155,22 @@
             </p>
 
             <p class="note">
-                A specific model for the description of observable and actuatable Properties is outside the scope of the
-                SSN Ontology.
+                A model for the description of observable and actuatable Properties is outside the scope of the SSN
+                Ontology.
                 See <a href="#property-definition">Property definitions</a> for links to some external resources that
-                address this.
+                address this, and to some catalogues and code lists whose members may be used as instances of
+                <a href="#SOSAFeatureOfInterest">Property</a>.
             </p>
 
             <table>
                 <tbody>
                     <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td>
-                            <span about="sosa:Property" property="skos:example">Cars (a feature type) have a
-                                property "colour".</span>
+                            <span about="sosa:Property" property="skos:example">
+                                Cars (a feature type) have a property "colour"
+                                <br>Windows have a property "open state".</span>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>Note</th>
-                        <td><span about="sosa:Property" property="skos:note">Concepts from existing code lists,
-                                vocabularies,
-                                and taxonomies, may be used as instances of <a
-                                    href="#SOSAFeatureOfInterest">Property</a>.</span></td>
                     </tr>
                     <tr class="ssn">
                         <th class="restrictions">Restrictions:</th>
@@ -232,12 +227,13 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td>
-                            <span rel="skos:example">For example, from a <a href="#SOSASensor">Sensor</a>
-                                to the properties it can observe; from an <a href="#SOSAActuator">Actuator</a> to the
-                                properties it can act on; from a <a href="#SOSAProcedure">Procedure</a> to the
-                                properties it can observe or act on.</span>
+                            <span rel="skos:example">
+                                from a <a href="#SOSASensor">Sensor</a> to the properties it can observe;
+                                <br>from an <a href="#SOSAActuator">Actuator</a> to the properties it can act on;
+                                <br>from a <a href="#SOSAProcedure">Procedure</a> to the properties it can observe or
+                                act on.</span>
                         </td>
                     </tr>
                     <tr>
@@ -623,12 +619,12 @@
                         <td>
                             <span property="skos:example">The measured <em>wind speed</em> differs depending on the
                                 height of the
-                                <a href="#SOSASensor">Sensor</a> above the surface, e.g., due to friction.
-                                Consequently, procedures for measuring wind speed define a standard height for
+                                <a href="#SOSASensor">Sensor</a> above the surface, due to friction.
+                                For this reason, procedures for measuring wind speed define a standard height for
                                 anemometers above ground, typically 10m for meteorological measures and 2m in
                                 Agrometeorology.
-                                This definition of height, <a href="#SOSASensor">Sensor</a> placement, and
-                                so forth are defined by the <a href="#SOSAProcedure">Procedure</a>.</span>
+                                This definition of height, <a href="#SOSASensor">Sensor</a> placement, etc are defined
+                                by the <a href="#SOSAProcedure">Procedure</a>.</span>
                         </td>
                     </tr>
                     <tr>
@@ -1246,10 +1242,6 @@
                                 class. </span>
                         </td>
                     </tr>
-                    <tr>
-                        <th>Example</th>
-                        <td><span property="skos:example">... TODO ...</span></td>
-                    </tr>
                     <tr class="ssn">
                         <th>Sub class of</th>
                         <td>
@@ -1319,7 +1311,7 @@
                 <tbody>
                     <tr>
                     <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td><span property="skos:example">
                                 <pre>
 "2024-01-23T19:26:00+11:00"^^xsd:dateTime
@@ -1646,6 +1638,8 @@
             </p>
             <p class="note">The result of an actuation or observation may be a quantity.
                 See <a href="#uom">Quantity Values and Units of Measure</a> for patterns to describe this.</p>
+            <p class="note">The result of an actuation or observation may be a geometry.
+                See <a href="#location-geometry">Location and Geometry</a> for patterns to describe this.</p>
 
             <table>
                 <tbody>
@@ -1659,13 +1653,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td>
                             <span property="skos:example">
                                 <pre>
 "89"^^xsd:integer 
 "true"^^xsd:boolean
 "23.5"^^unit:DEG_C
+"23.5 Cel"^^cdt:ucum
+"Point (145.042316 -37.919134)"^^geo:wktLiteral
 </pre>
                             </span>
                         </td>
@@ -2091,6 +2087,47 @@
             <table>
                 <tbody>
                     <tr>
+                        <th>Examples</th>
+                        <td>
+                            <span property="skos:example">
+                                <pre>
+sosa:phenomenonTime [
+    a time:Instant ;
+    time:inXSDDateTime "2023-06-20T21:49:18+00:00"^^xsd:dateTime ;
+] ;
+
+sosa:phenomenonTime [
+    a time:Interval ;
+    time:hasBeginning [ 
+        a time:Instant ;
+        time:inXSDDateTime "2017-04-15T23:59:30+00:00"^^xsd:dateTime 
+    ] ;
+    time:hasEnd [ 
+        a time:Instant ;
+        time:inXSDDateTime "2017-04-16T00:00:00+00:00"^^xsd:dateTime 
+    ] ;
+] ;
+
+sosa:phenomenonTime [
+    a time:Interval ;
+    time:hasBeginning [
+        a time:Instant ;
+        time:inTimePosition [
+            time:hasTRS ex:BP ;
+            time:numericPosition 12000 ;
+        ] ;
+    ] ;
+    time:hasDuration [
+        a time:Duration ;
+        time:numericDuration 500 ;
+        time:unitType time:unitYear ;
+    ] ;
+] ;
+</pre>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
                         <th>Domain Includes</th>
                         <td>
                             <span rel="schema:domainIncludes" resource="sosa:Execution"><a
@@ -2159,34 +2196,36 @@
             <table>
                 <tbody>
                     <tr>
-                    <tr>
-                        <th>Example</th>
-                        <td><span property="skos:example">
+                        <th>Examples</th>
+                        <td>
+                            <span property="skos:example">
                                 <pre>
-    "2024-01-23T19:26:00+11:00"^^xsd:dateTime
-    "2024-01-23"^^xsd:date
-    "2024-01"^^xsd:gMonth
-    "2024"^^xsd:gYear
-    </pre>
-                            </span></td>
+"2024-01-23T19:26:00+11:00"^^xsd:dateTime
+"2024-01-23"^^xsd:date
+"2024-01"^^xsd:gMonth
+"2024"^^xsd:gYear
+</pre>
+                            </span>
+                        </td>
                     </tr>
                     <tr class="ssn">
                         <th>Sub property of</th>
                         <td>
-                            <span rel="rdfs:subPropertyOf" resource="sosa:endTime"><a
-                                    href="#SOSAendTime">sosa:endTime</a></span>
+                            <span rel="rdfs:subPropertyOf" resource="sosa:endTime">
+                                <a href="#SOSAendTime">sosa:endTime</a>
+                            </span>
                         </td>
                     </tr>
                     <th>Domain Includes</th>
                     <td>
-                        <span rel="schema:domainIncludes" resource="sosa:Observation"><a
-                                href="#SOSAObservation">sosa:Observation</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:ObservationCollection"><a
-                                href="#SOSAObservationCollection">sosa:ObservationCollection</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:Sampling"><a
-                                href="#SOSASampling">sosa:Sampling</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:SamplingCollection"><a
-                                href="#SOSASamplingCollection">sosa:SamplingCollection</a></span>
+                        <span rel="schema:domainIncludes" resource="sosa:Observation">
+                            <a href="#SOSAObservation">sosa:Observation</a></span>
+                        , <span rel="schema:domainIncludes" resource="sosa:ObservationCollection">
+                            <a href="#SOSAObservationCollection">sosa:ObservationCollection</a></span>
+                        , <span rel="schema:domainIncludes" resource="sosa:Sampling">
+                            <a href="#SOSASampling">sosa:Sampling</a></span>
+                        , <span rel="schema:domainIncludes" resource="sosa:SamplingCollection">
+                            <a href="#SOSASamplingCollection">sosa:SamplingCollection</a></span>
                     </td>
                     </tr>
                     <tr>
@@ -2239,8 +2278,7 @@
             <table>
                 <tbody>
                     <tr>
-                    <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td><span property="skos:example">
                                 <pre>
 "2024-01-23T19:26:00+11:00"^^xsd:dateTime
@@ -2250,21 +2288,22 @@
 </pre>
                             </span></td>
                     </tr>
-                    <th>Domain Includes</th>
-                    <td>
-                        <span rel="schema:domainIncludes" resource="sosa:Execution"><a
-                                href="#SOSAExecution">sosa:Execution</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:Actuation"><a
-                                href="#SOSAActuation">sosa:Actuation</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:ActuationCollection"><a
-                                href="#SOSAActuationCollection">sosa:ActuationCollection</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:Observation"><a
-                                href="#SOSAObservation">sosa:Observation</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:ObservationCollection"><a
-                                href="#SOSAObservationCollection">sosa:ObservationCollection</a></span>
-                        , <span rel="schema:domainIncludes" resource="sosa:Sampling"><a
-                                href="#SOSASampling">sosa:Sampling</a></span>
-                    </td>
+                    <tr>
+                        <th>Domain Includes</th>
+                        <td>
+                            <span rel="schema:domainIncludes" resource="sosa:Execution"><a
+                                    href="#SOSAExecution">sosa:Execution</a></span>
+                            , <span rel="schema:domainIncludes" resource="sosa:Actuation"><a
+                                    href="#SOSAActuation">sosa:Actuation</a></span>
+                            , <span rel="schema:domainIncludes" resource="sosa:ActuationCollection"><a
+                                    href="#SOSAActuationCollection">sosa:ActuationCollection</a></span>
+                            , <span rel="schema:domainIncludes" resource="sosa:Observation"><a
+                                    href="#SOSAObservation">sosa:Observation</a></span>
+                            , <span rel="schema:domainIncludes" resource="sosa:ObservationCollection"><a
+                                    href="#SOSAObservationCollection">sosa:ObservationCollection</a></span>
+                            , <span rel="schema:domainIncludes" resource="sosa:Sampling"><a
+                                    href="#SOSASampling">sosa:Sampling</a></span>
+                        </td>
                     </tr>
                     <tr>
                         <th>is Defined By</th>
@@ -2473,10 +2512,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td><span property="skos:example">For example,
-                                a temperature <a href="#SOSASensor">Sensor</a> deployed on a wall,
-                                or a whole network of Sensors deployed for an Observation campaign.</span></td>
+                                a temperature <a href="#SOSASensor">Sensor</a> deployed on a wall<br>>
+                                a network of Sensors deployed for an Observation campaign.</span></td>
                     </tr>
                     <tr class="ssn">
                         <th class="restrictions">Restrictions</th>
@@ -2554,7 +2593,7 @@
             <table>
                 <tbody>
                     <tr>
-                        <th>Example</th>
+                        <th>Examples</th>
                         <td>
                             <span property="skos:example">A post, buoy, vehicle, ship, aircraft, satellite,
                                 cell-phone,
@@ -3117,9 +3156,9 @@
                     <tr>
                         <th>Example</th>
                         <td>
-                            <span rel="skos:example">For example, a relation between a buoy and a <a
-                                    href="#SOSADeployment">Deployment</a> of several <a
-                                    href="#SOSASensor">Sensors</a>.</span>
+                            <span rel="skos:example">For example, a relation between a buoy and a
+                                <a href="#SOSADeployment">Deployment</a> of several
+                                <a href="#SOSASensor">Sensors</a>.</span>
                         </td>
                     </tr>
                     <tr>
@@ -3450,9 +3489,13 @@
                     properties of their members are given for each collection type.</span>
             </p>
             <p>
-                <span property="skos:note">Note that there is a single `member` property. OWL or SHACL constraints may
-                    limit the range depending on the context of different collection types.</span>
+                <span property="skos:note">Note that there is a single `member` property.
+                    OWL or SHACL constraints may limit the range depending on the context of different collection
+                    types.</span>
             </p>
+            <p class="note">
+                See <a href="#time-series">Time series</a> and <a href="#observation-collection">Homogeneous observation
+                    collection</a> for examples of use of <code>hasMember</code>.</p>
             <table>
                 <tbody>
                     <tr class="ssn">
