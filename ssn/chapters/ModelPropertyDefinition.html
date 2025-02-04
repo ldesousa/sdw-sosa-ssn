@@ -42,14 +42,14 @@
     <a href="#SOSAactsOnProperty"><code>sosa:actsOnProperty</code></a> or
     <a href="#SOSAobservedProperty"><code>sosa:observedProperty</code></a> of an Execution.
 </p>
+<h4>Feature-specific properties</h4>
 <p>
     Most commonly an instance of <a href="#SOSAProperty"><code>sosa:Property</code></a> is generic to many
     features of interest (e.g. <code>ex:Temperature</code>, <code>ex:OnOffStatus</code>).
     The catalogs listed above support this use case.
 </p>
-<h4>Feature-specific properties</h4>
 <p>
-    Alternatively property may be made specific to a single feature of interest using
+    Alternatively a property may be made specific to a single feature of interest using
     <a href="#SOSAisPropertyOf"><code>sosa:isPropertyOf</code></a>
     (e.g. <code>ex:SickChildATemperature</code>, <code>ex:LightStatus</code>).
     Specific properties of individual features would not usually appear in a catalogue of reusable properties,
@@ -70,6 +70,9 @@
 <p>
     [[SAREF]] is closely aligned with SSN as <a href="#SAREF-alignment">documented in the alignments chapter</a>
     so this may be used in SSN applications.
+</p>
+<p class="note">
+    Where a property is defined as applying to a specific feature of interest, it cannot be used for an observation concerning any other feature of interest. 
 </p>
 <p class="note">
     Where <a href="#SOSAactsOnProperty"><code>sosa:actsOnProperty</code></a> or
