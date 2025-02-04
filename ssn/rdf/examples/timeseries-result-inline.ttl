@@ -29,9 +29,11 @@ ex:ts159i
   2017-04-15T20:01:00+00:00 3.21
   2017-04-15T20:02:00+00:00 3.15 
   2017-04-15T20:03:00+00:00 3.15"""^^ex:vector2D-T-M-PER-SEC ;
+  rdfs:comment "The result of the observation has four values, where each value is composed of a timestamp and a quantity in metres per second."@en ;
 .
 ex:ex:vector2D-T-M-PER-SEC a rdfs:DataType ;
   skos:definition "A 2-D vector, each value is a timestamp and a quantity in metres per second."@en ;
+  rdfs:comment "This datatype is used to represent a series of results, where each result is composed of a timestamp and a quantity in metres per second."@en ;
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .

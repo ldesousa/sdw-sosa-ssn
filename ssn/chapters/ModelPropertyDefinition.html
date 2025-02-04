@@ -1,6 +1,9 @@
 <h3>Property definitions</h3>
 <p>
     The SSN Ontology does not provide a general pattern for describing observable or actuatable properties.
+</p>
+<h4>Catalogues of properties</h4>
+<p>
     A number of existing catalogues of properties are available, such as:
 </p>
 <ul>
@@ -11,22 +14,42 @@
     <li><a href="https://github.com/EnvironmentOntology">The Environment Ontology</a></li>
 </ul>
 <p>
-    Each of these uses a distinct ontology or way of formalizing the definition of a property, suitable for many
+    Each of these uses a distinct ontology or way of formalizing the definition of a property suitable for many
     applications.
+</p>
+<h4>New property definitions</h4>
+<p>
     Alternatively, the <a href="https://w3id.org/env/puv">Parameter Usage Vocabulary</a> or
     <a href="https://doi.org/10.15497/RDA00071">I-ADOPT</a> may be used to define a new observable or actuatable
     property.
-    The key point is that each individual property is denoted by a URI, which can be used as the value of the
+    For example, using the I-ADOPT terminology, the property <a
+        href="http://qudt.org/vocab/quantitykind/Temperature">Temperature</a> may be specialized to apply to a sick
+    child as follows:
+</p>
+<figure id="Temperature-i-adopt">
+    <img alt="Constrained temperature definition" src="./images/Temperature-i-adopt.svg" style="width:90%" />
+    <figcaption>
+        Definition of a constrained temperature property for a sick child, using the I-ADOPT vocabulary.
+        <br>
+        <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
+    </figcaption>
+</figure>
+<pre class="example" data-include="./rdf/examples/Temperature-i-adopt.ttl" data-include-format="text"></pre>
+<p>
+    The key point is that an individual property, either taken from a catalogue or defined using a specialist
+    vocabaulary, is denoted by a URI.
+    This URI can then be used as the value of the
     <a href="#SOSAactsOnProperty"><code>sosa:actsOnProperty</code></a> or
     <a href="#SOSAobservedProperty"><code>sosa:observedProperty</code></a> of an Execution.
 </p>
 <p>
     Most commonly an instance of <a href="#SOSAProperty"><code>sosa:Property</code></a> is generic to many
     features of interest (e.g. <code>ex:Temperature</code>, <code>ex:OnOffStatus</code>).
-    The catalogs mentioned above primarily support this use case.
+    The catalogs listed above support this use case.
 </p>
+<h4>Feature-specific properties</h4>
 <p>
-    A property may be made specific to a single feature of interest using
+    Alternatively property may be made specific to a single feature of interest using
     <a href="#SOSAisPropertyOf"><code>sosa:isPropertyOf</code></a>
     (e.g. <code>ex:SickChildATemperature</code>, <code>ex:LightStatus</code>).
     Specific properties of individual features would not usually appear in a catalogue of reusable properties,
@@ -47,13 +70,6 @@
 <p>
     [[SAREF]] is closely aligned with SSN as <a href="#SAREF-alignment">documented in the alignments chapter</a>
     so this may be used in SSN applications.
-</p>
-<p class="note">
-    For properties described as SKOS Concepts ([[skos-primer]]), such as in the
-    <a href="https://vocab.nerc.ac.uk/search_nvs/S06/">BODC parameter entity names</a> catalog,
-    standard SKOS semantic relations may be useful,
-    e.g. <a href="http://www.w3.org/2004/02/skos/core#broader"><code>skos:broader</code></a> to relate a specialized
-    property to the general case.
 </p>
 <p class="note">
     Where <a href="#SOSAactsOnProperty"><code>sosa:actsOnProperty</code></a> or

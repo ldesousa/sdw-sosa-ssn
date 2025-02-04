@@ -24,6 +24,7 @@ ex:ts159l
   ] ;
   sosa:resultTime "2017-04-15T20:03:30+00:00"^^xsd:dateTime ;
   sosa:hasResult <https://example.org/data/tso/netcdf/ts159> ;
+  rdfs:comment "The result of the observation is accessed using the URI https://example.org/data/tso/netcdf/ts159 (notional)."@en ;
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
