@@ -106,12 +106,29 @@ sosa:Execution
     For example, the following is a potential scenario.
     There is an entity typed with a class from a domain model:
 </p>
+<figure id="domain-feature">
+    <img alt="a domain feature" src="./images/domain-feature.svg" style="width:90%" />
+    <figcaption>
+        A feature classified using a domain ontology. 
+        <br>
+        <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
+    </figcaption>
+</figure>
 <pre>
 ex:YarraAboveDightsFalls rdf:type hydro:RiverReach .
 </pre>
 <p>
     An observation is made concerning a property of this entity:
 </p>
+<figure id="domain-feature-observed">
+    <img alt="a domain feature" src="./images/domain-feature-observed.svg" style="width:90%" />
+    <figcaption>
+        An observation on a feature previously classified using a domain ontology. 
+        <br>
+        <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
+    </figcaption>
+</figure>
+
 <pre>
 ex:o345 rdf:type sosa:Observation ;
     sosa:hasFeatureOfInterest ex:YarraAboveDightsFalls ;
