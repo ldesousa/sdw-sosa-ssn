@@ -14,8 +14,8 @@
     <li><a href="https://github.com/EnvironmentOntology">The Environment Ontology</a></li>
 </ul>
 <p>
-    Each of these uses a distinct ontology or way of formalizing the definition of a property suitable for many
-    applications.
+    Each of these uses a distinct ontology &mdash; or way of formalizing the definition of a property &mdash; suitable
+    for many applications.
 </p>
 <h4>New property definitions</h4>
 <p>
@@ -36,7 +36,7 @@
 </figure>
 <pre class="example" data-include="./rdf/examples/Temperature-i-adopt.ttl" data-include-format="text"></pre>
 <p>
-    The key point is that an individual property, either taken from a catalogue or defined using a specialist
+    The key point is that an individual property, whether taken from a catalogue or defined using a specialist
     vocabaulary, is denoted by a URI.
     This URI can then be used as the value of the
     <a href="#SOSAactsOnProperty"><code>sosa:actsOnProperty</code></a> or
@@ -49,9 +49,9 @@
     The catalogs listed above support this use case.
 </p>
 <p>
-    Alternatively a property may be made specific to a single feature of interest using
+    Alternatively, a property may be made specific to a single feature of interest using
     <a href="#SOSAisPropertyOf"><code>sosa:isPropertyOf</code></a>
-    (e.g. <code>ex:SickChildATemperature</code>, <code>ex:LightStatus</code>).
+    (e.g. <code>ex:SickChildATemperature</code>, <code>ex:Room34LightStatus</code>).
     Specific properties of individual features would not usually appear in a catalogue of reusable properties,
     but this pattern is used in some applications.
     In that context, a key requirement is to relate the specific property to the general case for the underlying
@@ -62,8 +62,7 @@
     <code>saref:Property</code> for the general case, and <code>saref:PropertyOfInterest</code> for the case where a
     property is bound to a single feature of interest.
     An instance of the latter may be connected to an instance of the former using the predicate
-    <code>saref:hasPropertyKind</code>,
-    as shown in the following example:.
+    <code>saref:hasPropertyKind</code>, as shown in the following example:.
 </p>
 <pre class="example" data-include="./rdf/examples/Temperature-of-interest-specialization.ttl"
     data-include-format="text"></pre>
@@ -72,7 +71,8 @@
     so this may be used in SSN applications.
 </p>
 <p class="note">
-    Where a property is defined as applying to a specific feature of interest, it cannot be used for an observation concerning any other feature of interest. 
+    Where a property is defined as applying to a specific feature of interest, it cannot be used for an observation
+    concerning any other feature of interest.
 </p>
 <p class="note">
     Where <a href="#SOSAactsOnProperty"><code>sosa:actsOnProperty</code></a> or

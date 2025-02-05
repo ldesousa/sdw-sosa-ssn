@@ -51,7 +51,7 @@ ex:EarthAtmosphere a sosa:FeatureOfInterest ;
   . 
 ex:C14-Age a sosa:Property ;
   owl:sameAs <http://vocab.nerc.ac.uk/collection/S06/current/S0600001/> ;
-  skos:definition "The age of an object determined by radiocarbon dating expressed relative to a datum of AD 1950." ;
+  skos:definition "The age of an object, determined by radiocarbon dating, expressed relative to a datum of AD 1950." ;
   skos:prefLabel "14C age" ;
 .
 ex:CO2-Concentration a sosa:Property ;

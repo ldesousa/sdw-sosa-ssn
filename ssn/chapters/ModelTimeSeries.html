@@ -4,7 +4,7 @@
     There are a number of ways these may be modeled using the SSN Ontology.
 </p>
 <p>
-    The most explicit representation has each member of the series to be an individual member of a <a href="#Collections">Collection</a>.
+    The most explicit representation has each member of the series as an individual member of a <a href="#Collections">Collection</a>.
     For example <a href="#timeseries-oc"></a> shows an <a href="#SOSAObservationCollection">Collection of Observations</a> that has a member for each time-step in the series.
 </p>
 <figure id="timeseries-oc">
@@ -19,7 +19,7 @@
 
 <p>
     Alternatively, the series may be represented as a single <a href="#SOSAObservation">Observation</a> with a <a href="#SOSAhasResult">hasResult</a> that is a complex value, such as a vector or array.
-    This may be indicated 'inline' as a complex data-structure, or 'linked' to a separate resource, as in the following two examples. 
+    This may be indicated 'inline' as a complex data-structure, or be 'linked' to a separate resource, as in the following two examples. 
 </p>
 <pre class="example" data-include="./rdf/examples/timeseries-result-inline.ttl" data-include-format="text"></pre>
 <br>
