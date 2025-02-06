@@ -91,15 +91,15 @@ sosa:Execution
         href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a>
     <em>in addition to</em> any other information that was already available about it, including any pre-existing type.
 </p>
-<p>Note that this constraint does not require you to derive domain types as sub-classes of
-    <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a>.
+<p>Note that <b>this does not require you to derive domain types as sub-classes of
+        <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a></b>.
     It could be argued that would be an error.
     It merely says that when a domain individual participates in an Execution (e.g. an Observation)
     it becomes a member of the class <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a>
-    in addition to any pre-existing domain class.
-    Membership in the class <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a>
-    does not need to be asserted explicitly,
-    and does not need to be assigned prior to the involvement of an entity in a
+    <b>in addition to</b> any pre-existing domain class.
+    In the context of SSN axiomatization, membership in the class
+    <a href="#SOSAFeatureOfInterest"><code>sosa:FeatureOfInterest</code></a>
+    does not need to be asserted explicitly, and does not need to be assigned prior to the involvement of an entity in a
     <a href="#SOSAExecution"><code>sosa:Execution</code></a> (or one of its sub-classes).
 </p>
 <p>
@@ -107,9 +107,9 @@ sosa:Execution
     There is an entity typed with a class from a domain model:
 </p>
 <figure id="domain-feature">
-    <img alt="a domain feature" src="./images/domain-feature.svg" style="width:30%" />
+    <embed alt="a domain feature" src="./images/domain-feature.svg" style="width:25%" />
     <figcaption>
-        A feature classified using a domain ontology. 
+        A feature classified using a domain ontology.
         <br>
         <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
     </figcaption>
@@ -121,9 +121,9 @@ ex:YarraAboveDightsFalls rdf:type hydro:RiverReach .
     An observation is made concerning a property of this entity:
 </p>
 <figure id="domain-feature-observed">
-    <img alt="a domain feature" src="./images/domain-feature-observed.svg" style="width:90%" />
+    <embed alt="a domain feature" src="./images/domain-feature-observed.svg" style="width:90%" />
     <figcaption>
-        An observation on a feature previously classified using a domain ontology. 
+        An observation on a feature previously classified using a domain ontology.
         <br>
         <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
     </figcaption>
