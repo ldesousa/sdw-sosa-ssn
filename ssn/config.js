@@ -150,6 +150,25 @@ var respecConfig = {
       publisher: "Regenstrief Institute, Inc.",
       date: "21 November 2017"
     },
+    "DCAT": {
+      authors: [
+          "Riccardo Albertoni",
+          "David Browning",
+          "Simon Cox",
+          "Alejandra Gonzalez Beltran",
+          "Andrea Perego",
+          "Peter Winstanley"
+      ],
+      href: "https://www.w3.org/TR/vocab-dcat/",
+      title: "Data Catalog Vocabulary (DCAT) - Version 3",
+      rawDate: "2024-08-22",
+      status: "REC",
+      publisher: "W3C",
+      edDraft: "https://w3c.github.io/dxwg/dcat/",
+      deliveredBy: [
+          "https://www.w3.org/2017/dxwg/"
+      ],
+    },
     "DUL": {
       href: "http://ontologydesignpatterns.org/wiki/Ontology:DOLCE+DnS_Ultralite",
       authors: ["Aldo Gangemi"],
@@ -191,6 +210,12 @@ var respecConfig = {
       volume: "8",
       page: "453-470",
       authors: ["S.J.D. Cox"]
+    },
+    "Project-PROV": {
+      href: "https://linked.data.gov.au/def/project/",
+      authors: ["Simon J D Cox"],
+      title: "A Project Ontology",
+      date: "2017"
     },
     "SSN-PROV": {
       href: "http://ceur-ws.org/Vol-1401/paper-05.pdf",

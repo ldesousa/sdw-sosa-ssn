@@ -12,7 +12,6 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix sosa-common: <http://www.w3.org/ns/sosa/common/> .
 @prefix sosa-sam: <http://www.w3.org/ns/sosa/sam/> .
-@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix ssn-common: <http://www.w3.org/ns/ssn/common/> .
 @prefix ssn-sam: <http://www.w3.org/ns/ssn/sam/> .
 
@@ -34,7 +33,6 @@ sosa:MaterialSample
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:Sample 
-  rdfs:subClassOf sosa:FeatureOfInterest ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:allValuesFrom sosa:Sampling ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOf ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isSampleOf ; owl:allValuesFrom sosa:FeatureOfInterest ]  ;
@@ -42,7 +40,7 @@ sosa:Sample
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasOriginalSample ; owl:allValuesFrom sosa:Sample ]  ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSampledFeature ; owl:allValuesFrom sosa:FeatureOfInterest ]  ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOfMadeBySampler ; owl:allValuesFrom sosa:Sampler ]  ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOfUsedProcedure ; owl:allValuesFrom sosa:SamplingProcedure ]  ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:isResultOfUsedProcedure ; owl:allValuesFrom sosa:Procedure ]  ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SampleCollection 
@@ -61,8 +59,6 @@ sosa:SampleCollection
 
 sosa:Sampler 
   rdfs:subClassOf sosa:System ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implements ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implements ; owl:allValuesFrom sosa:SamplingProcedure ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeSampling ; owl:allValuesFrom sosa:Sampling ] ;
   rdfs:isDefinedBy sosa-sam: .
 
@@ -70,19 +66,22 @@ sosa:Sampling
   rdfs:subClassOf sosa:Execution ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeBySampler ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeBySampler ; owl:allValuesFrom sosa:Sampler ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure ; owl:allValuesFrom sosa:SamplingProcedure ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom sosa:FeatureOfInterest ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasUltimateFeatureOfInterest ; owl:allValuesFrom sosa:FeatureOfInterest ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom sosa:Sample ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:resultTime ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:startTime ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
   rdfs:isDefinedBy sosa-sam: .
 
-sosa:SamplingProcedure 
-  rdfs:subClassOf sosa:Procedure ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:implementedBy ; owl:allValuesFrom sosa:Sampler ] ;
+sosa:SamplingCollection 
+  rdfs:subClassOf rdf:Bag ;
+  rdfs:subClassOf sosa:ExecutionCollection ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:madeBySampler ; owl:allValuesFrom sosa:Sampler ] ;
+  rdfs:subClassOf [ 
+    a owl:Restriction ; 
+    owl:onProperty sosa:hasMember ; 
+    owl:allValuesFrom [ 
+      owl:unionOf ( 
+        sosa:Sampling 
+        sosa:SamplingCollection 
+      ) ;
+    ] 
+  ] ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:SpatialSample 
@@ -120,9 +119,11 @@ sosa:isSampleOf
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:madeBySampler 
+  rdfs:subPropertyOf sosa:madeBySystem ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:madeSampling 
+  rdfs:subPropertyOf sosa:madeExecution ;
   rdfs:isDefinedBy sosa-sam: .
 
 sosa:madeSamplingHasResult 
@@ -151,6 +152,35 @@ sosa:usedForExecutionHasResult
 #    owl:inverseOf sosa:hasResultingSample ;
 #    rdfs:isDefinedBy sosa-sam: .
 
+sosa:SampleCollection 
+  rdfs:subClassOf rdf:Bag ;
+  rdfs:subClassOf [ 
+    a owl:Restriction ; 
+    owl:onProperty sosa:hasMember ; 
+    owl:allValuesFrom [ 
+      owl:unionOf ( 
+        sosa:Sample 
+        sosa:SampleCollection 
+      ) ; 
+    ] 
+  ] ;
+  rdfs:isDefinedBy sosa-sam: .
+
+sosa:SamplingCollection 
+  rdfs:subClassOf rdf:Bag ;
+  rdfs:subClassOf [ 
+    a owl:Restriction ; 
+    owl:onProperty sosa:hasMember ; 
+    owl:allValuesFrom [ 
+      owl:unionOf ( 
+        sosa:Sampling 
+        sosa:SamplingCollection 
+      ) ; 
+    ] 
+  ] ;
+  rdfs:isDefinedBy sosa-sam: .
+
+
 ## End of sampling schema
 ## -------------------------------------------------------- ##
 ## additional axioms for sosa-common: terms in sampling context
@@ -177,9 +207,6 @@ sosa:isFeatureOfInterestOf
   rdfs:isDefinedBy sosa-common: .
 
 sosa:Property 
-  rdfs:isDefinedBy sosa-common: .
-
-sosa:PropertyOfInterest 
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasProperty 
@@ -213,9 +240,6 @@ sosa:Execution
   rdfs:isDefinedBy sosa-common: .
 
 sosa:hasInputValue 
-  rdfs:isDefinedBy sosa-common: .
-
-sosa:hasOutputValue 
   rdfs:isDefinedBy sosa-common: .
 
 sosa:startTime 

@@ -28,7 +28,7 @@ sosa:Actuation
 sosa:Actuator
   rdfs:subClassOf obo:BFO_0000004 ;
 .
-sosa:ObservableProperty
+sosa:Property
   rdfs:subClassOf obo:BFO_0000019 ;
 .
 sosa:Observation
@@ -57,9 +57,9 @@ sosa:bco
   owl:imports <http://purl.obolibrary.org/obo/bco/> ;
   owl:imports ssn: ;
 .
-ssn:Property
+sosa:Property
   owl:equivalentClass obo:BFO_0000019 ;
 .
-ssn:System
+sosa:System
   rdfs:subClassOf obo:BFO_0000004 ;
 .

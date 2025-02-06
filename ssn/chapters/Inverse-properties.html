@@ -23,7 +23,7 @@
         <!-- <td><a href="#SOSAActuator">sosa:Actuator</a></td> -->
         <td><a href="#SOSAactsOn">sosa:actsOn</a>*</td>
         <td><a href="#SOSAisActedOnBy">sosa:isActedOnBy</a></td>
-        <!-- <td><a href="#SOSAActuatableProperty">sosa:ActuatableProperty</a></td> -->
+        <!-- <td><a href="#SOSAProperty">sosa:Property</a></td> -->
     </tr>
     <tr>
         <!-- <td>
@@ -32,7 +32,7 @@
         </td> -->
         <td><a href="#SOSAactsOnProperty">sosa:actsOnProperty</a></td>
         <td><a href="#SOSAwasActedOnBy">sosa:wasActedOnBy</a>*</td>
-        <!-- <td><a href="#SOSAActuatableProperty">sosa:ActuatableProperty</a></td> -->
+        <!-- <td><a href="#SOSAProperty">sosa:Property</a></td> -->
     </tr>
     <tr>
         <!-- <td><a href="#SOSADeployment">sosa:Deployment</a></td> -->
@@ -59,9 +59,17 @@
     </tr>
     <tr>
         <!-- <td>
+            <a href="#SOSAExecution">sosa:Execution</a>*
+            ,<br><a href="#SOSAActuation">sosa:Actuation</a>
+            ,<br><a href="#SOSAActuationCollection">sosa:ActuationCollection</a>*
+        </td> -->
+        <td><a href="#SOSAendTime">sosa:endTime</a>*</td>
+        <td>Datatype Property<br> - no inverse</td>
+        <!-- <td>xsd:dateTime xsd:date xsd:gYearMonth xsd:gYear</td> -->
+    </tr>
+    <tr>
+        <!-- <td>
             <a href="#SOSAProcedure">sosa:Procedure</a>
-            ,<br><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>*
-            ,<br><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>*
             ,<br><a href="#SOSASystem">sosa:System</a>
             ,<br><a href="#SOSAActuator">sosa:Actuator</a>
             ,<br><a href="#SOSASensor">sosa:Sensor</a>
@@ -75,8 +83,6 @@
         </td>
         <!-- <td>
             <a href="#SOSAProperty">sosa:Property</a>
-            ,<br><a href="#SOSAActuatableProperty">sosa:ActuatableProperty</a>
-            ,<br><a href="#SOSAObservableProperty">sosa:ObservableProperty</a>
         </td> -->
     </tr>
     <tr>
@@ -99,9 +105,6 @@
     <tr>
         <!-- <td>
             <a href="#SOSAProcedure">sosa:Procedure</a>
-            ,<br><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>*
-            ,<br><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>*
-            ,<br><a href="#SOSASamplingProcedure">sosa:SamplingProcedure</a>*
         </td> -->
         <td><a href="#SOSAhasInput">sosa:hasInput</a></td>
         <td><a href="#SOSAinputFor">sosa:inputFor</a>*</td>
@@ -151,23 +154,9 @@
     <tr>
         <!-- <td>
             <a href="#SOSAProcedure">sosa:Procedure</a>
-            ,<br><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>*
-            ,<br><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>*
-            ,<br><a href="#SOSASamplingProcedure">sosa:SamplingProcedure</a>*
         </td> -->
         <td><a href="#SOSAhasOutput">sosa:hasOutput</a></td>
         <td><a href="#SOSAoutputFor">sosa:outputFor</a>*</td>
-        <!-- <td>-</td> -->
-    </tr>
-    <tr>
-        <!-- <td>
-            <a href="#SOSAExecution">sosa:Execution</a>*
-            ,<br><a href="#SOSAActuation">sosa:Actuation</a>
-            ,<br><a href="#SOSAObservation">sosa:Observation</a>
-            ,<br><a href="#SOSASampling">sosa:Sampling</a>
-        </td> -->
-        <td><a href="#SOSAhasOutputValue">sosa:hasOutputValue</a>*</td>
-        <td><a href="#SOSAoutputValueForExecution">sosa:outputValueForExecution</a>*</td>
         <!-- <td>-</td> -->
     </tr>
     <tr>
@@ -176,7 +165,6 @@
         <td><a href="#SOSAisPropertyOf">sosa:isPropertyOf</a></td>
         <!-- <td>
             <a href="#SOSAProperty">sosa:Property</a>
-            ,<br><a href="#SOSAPropertyOfInterest">sosa:PropertyOfInterest</a>*
         </td> -->
     </tr>
     <tr>
@@ -270,9 +258,6 @@
         <td><a href="#SOSAimplementedBy">sosa:implementedBy</a></td>
         <!-- <td>
             <a href="#SOSAProcedure">sosa:Procedure</a>
-            ,<br><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>*
-            ,<br><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>*
-            ,<br><a href="#SOSASamplingProcedure">sosa:SamplingProcedure</a>*
         </td> -->
     </tr>
     <tr>
@@ -293,14 +278,14 @@
         <td><a href="#SOSAusedForExecutionHasResult">sosa:usedForExecutionHasResult</a>*</td>
         <!-- <td>
             <a href="#SOSAProcedure">sosa:Procedure</a>
-            ,<br><a href="#SOSASamplingProcedure">sosa:SamplingProcedure</a>
+            ,<br><a href="#OMSSamplingProcedure">sosa-oms:SamplingProcedure</a>
         </td> -->
     </tr>
     <tr>
         <!-- <td><a href="#SOSAStimulus">sosa:Stimulus</a></td> -->
         <td><a href="#SOSAisProxyFor">sosa:isProxyFor</a></td>
         <td><a href="#SOSAhasProxy">sosa:hasProxy</a>*</td>
-        <!-- <td><a href="#SOSAObservableProperty">sosa:ObservableProperty</a></td> -->
+        <!-- <td><a href="#SOSAProperty">sosa:Property</a></td> -->
     </tr>
     <tr>
         <!-- <td>
@@ -345,13 +330,13 @@
         </td> -->
         <td><a href="#SOSAobservedProperty">sosa:observedProperty</a></td>
         <td><a href="#SOSAwasObservedBy">sosa:wasObservedBy</a>*</td>
-        <!-- <td><a href="#SOSAObservableProperty">sosa:ObservableProperty</a></td> -->
+        <!-- <td><a href="#SOSAProperty">sosa:Property</a></td> -->
     </tr>
     <tr>
         <!-- <td><a href="#SOSASensor">sosa:Sensor</a></td> -->
         <td><a href="#SOSAobserves">sosa:observes</a></td>
         <td><a href="#SOSAisObservedBy">sosa:isObservedBy</a></td>
-        <!-- <td><a href="#SOSAObservableProperty">sosa:ObservableProperty</a></td> -->
+        <!-- <td><a href="#SOSAProperty">sosa:Property</a></td> -->
     </tr>
     <tr>
         <!-- <td><a href="#SOSAExecution">sosa:Execution</a>*
@@ -430,9 +415,6 @@
         <td><a href="#SOSAusedProcedure">sosa:usedProcedure</a></td>
         <td><a href="#SOSAusedForExecution">sosa:usedForExecution</a>*</td>
         <!-- <td><a href="#SOSAProcedure">sosa:Procedure</a>
-            ,<br><a href="#SOSAActuatingProcedure">sosa:ActuatingProcedure</a>*
-            ,<br><a href="#SOSAObservingProcedure">sosa:ObservingProcedure</a>*
-            ,<br><a href="#SOSASamplingProcedure">sosa:SamplingProcedure</a>*
         </td> -->
     </tr>
     <tr>

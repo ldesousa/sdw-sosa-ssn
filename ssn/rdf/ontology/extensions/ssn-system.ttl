@@ -11,44 +11,35 @@
 
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix sosa-common: <http://www.w3.org/ns/sosa/common/> .
-@prefix sosa-act: <http://www.w3.org/ns/sosa/act/> .
-@prefix sosa-obs: <http://www.w3.org/ns/sosa/obs/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
-@prefix ssn-act: <http://www.w3.org/ns/ssn/act/> .
 @prefix ssn-dep: <http://www.w3.org/ns/ssn/dep/> .
-@prefix ssn-obs: <http://www.w3.org/ns/ssn/obs/> .
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
-
-
-voaf:Vocabulary a owl:Class .
-foaf:Agent a owl:Class .
-foaf:name a owl:AnnotationProperty .
-dcterms:title a owl:AnnotationProperty .
-dcterms:description a owl:AnnotationProperty .
-dcterms:rights a owl:AnnotationProperty .
-dcterms:license a owl:AnnotationProperty .
-dcterms:created a owl:AnnotationProperty .
-dcterms:creator a owl:AnnotationProperty .
-skos:definition a owl:AnnotationProperty .
-skos:example a owl:AnnotationProperty .
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
-vann:preferredNamespaceUri a owl:AnnotationProperty .
 
 
 ssn-system: a owl:Ontology , voaf:Vocabulary ;
   dcterms:title "System capabilities, operating ranges, and survival ranges ontology"@en ;
   dcterms:description "This ontology describes system capabilities, operating ranges, and survival ranges."@en ;
   dcterms:creator [ a foaf:Agent ; foaf:name "W3C/OGC Spatial Data on the Web Working Group"@en ] ;
-  dcterms:rights "Copyright 2017 W3C/OGC." ;
+  dcterms:rights "Copyright 2017, 2024 W3C/OGC." ;
   dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
   dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
   rdfs:comment "Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org"@en ;
   rdfs:seeAlso <https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology> ;
   dcterms:created "2017-05-14"^^xsd:date ;
+  dcterms:modified "2024-06-04"^^xsd:date ;
   vann:preferredNamespacePrefix "ssn-system" ;
   vann:preferredNamespaceUri "http://www.w3.org/ns/ssn/systems/" ;
-  owl:imports ssn-act: , ssn-obs: , ssn-dep: .
+  owl:imports ssn: .
 
+# Range
+
+ssn-system:Range a owl:Class ;
+rdfs:label "Range"@en ;
+skos:definition "A primitive class to represent that the value is within a numerical range."@en ;
+rdfs:isDefinedBy ssn-system: .
+
+xsd:minInclusive rdfs:domain ssn-system:Range .
+xsd:maxInclusive rdfs:domain ssn-system:Range .
 
 # Quality of Observation
 
@@ -58,7 +49,7 @@ ssn-system:qualityOfObservation a owl:ObjectProperty ;
   rdfs:label "quality of observation"@en ;
   skos:definition "Relation linking an Observation to the adjudged quality of the Result. This is complimentary to the SystemCapability information recorded for the Sensor that made the Observation."@en ;
   rdfs:comment "Relation linking an Observation to the adjudged quality of the Result. This is complimentary to the SystemCapability information recorded for the Sensor that made the Observation."@en ;
-  rdfs:isDefinedBy ssn: .
+  rdfs:isDefinedBy ssn-system: .
 
 
 # System
@@ -138,6 +129,7 @@ ssn-system:hasSystemCapability a owl:ObjectProperty ;
       rdfs:label "Measurement Range"@en ;
       skos:definition "The set of values that the Sensor can return as the Result of an Observation under the defined Conditions."@en ;
       rdfs:comment "The set of values that the Sensor can return as the Result of an Observation under the defined Conditions."@en ;
+      rdfs:subClassOf ssn-system:Range;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf ssn-system:hasSystemProperty ] ; owl:allValuesFrom [ a owl:Restriction ; owl:onProperty [ owl:inverseOf ssn-system:hasSystemCapability ] ; owl:allValuesFrom sosa:Sensor ] ] ; 
       rdfs:isDefinedBy ssn-system: .
@@ -146,14 +138,15 @@ ssn-system:hasSystemCapability a owl:ObjectProperty ;
       rdfs:label "Actuation Range"@en ;
       skos:definition "The set of values that the Actuator can return as the Result of an Actuation under the defined Conditions with the defined system properties."@en ;
       rdfs:comment "The set of values that the Actuator can return as the Result of an Actuation under the defined Conditions with the defined system properties."@en ;
+      rdfs:subClassOf ssn-system:Range;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf ssn-system:hasSystemProperty ] ; owl:allValuesFrom [ a owl:Restriction ; owl:onProperty [ owl:inverseOf ssn-system:hasSystemCapability ] ; owl:allValuesFrom sosa:Actuator ] ] ; 
       rdfs:isDefinedBy ssn-system: .
 
     ssn-system:Accuracy a owl:Class ;
       rdfs:label "Accuracy"@en ;
-      skos:definition "The closeness of agreement between the Result of an Observation (resp. the command of an Actuation) and the true value of the observed ObservableProperty (resp. of the acted on ActuatableProperty) under the defined Conditions."@en ;
-      rdfs:comment "The closeness of agreement between the Result of an Observation (resp. the command of an Actuation) and the true value of the observed ObservableProperty (resp. of the acted on ActuatableProperty) under the defined Conditions."@en ;
+      skos:definition "The closeness of agreement between the Result of an Observation (resp. the command of an Actuation) and the true value of the observed Property (resp. of the acted on Property) under the defined Conditions."@en ;
+      rdfs:comment "The closeness of agreement between the Result of an Observation (resp. the command of an Actuation) and the true value of the observed Property (resp. of the acted on Property) under the defined Conditions."@en ;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:isDefinedBy ssn-system: .
 
@@ -169,10 +162,10 @@ ssn-system:hasSystemCapability a owl:ObjectProperty ;
       rdfs:label "Drift"@en ;
       skos:definition """As a Sensor Property: a continuous or incremental change in the reported values of Observations over time for an unchanging Property under the defined Conditions.
 
-      As an Actuator Property: a continuous or incremental change in the true value of the acted on ActuatableProperty over time for an unchanging command under the defined Conditions."""@en ;
+      As an Actuator Property: a continuous or incremental change in the true value of the acted on Property over time for an unchanging command under the defined Conditions."""@en ;
       rdfs:comment """As a Sensor Property: a continuous or incremental change in the reported values of Observations over time for an unchanging Property under the defined Conditions. 
 
-      As an Actuator Property: a continuous or incremental change in the true value of the acted on ActuatableProperty over time for an unchanging command under the defined Conditions."""@en ;
+      As an Actuator Property: a continuous or incremental change in the true value of the acted on Property over time for an unchanging command under the defined Conditions."""@en ;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:isDefinedBy ssn-system: .
 
@@ -203,45 +196,45 @@ ssn-system:hasSystemCapability a owl:ObjectProperty ;
 
     ssn-system:Resolution a owl:Class ;
       rdfs:label "Resolution"@en ;
-      skos:definition """As a Sensor Property: the smallest difference in the value of a ObservableProperty being observed that would result in perceptably different values of Observation Results, under the defined Conditions.
+      skos:definition """As a Sensor Property: the smallest difference in the value of a Property being observed that would result in perceptably different values of Observation Results, under the defined Conditions.
 
-      As an Actuator Property: the smallest difference in the value of an Actuation command that would result in a value change of the ActuatableProperty being acted on, under the defined Conditions."""@en ;
-      rdfs:comment """As a Sensor Property: the smallest difference in the value of a ObservableProperty being observed that would result in perceptably different values of Observation Results, under the defined Conditions. 
+      As an Actuator Property: the smallest difference in the value of an Actuation command that would result in a value change of the Property being acted on, under the defined Conditions."""@en ;
+      rdfs:comment """As a Sensor Property: the smallest difference in the value of a Property being observed that would result in perceptably different values of Observation Results, under the defined Conditions. 
 
-      As an Actuator Property: the smallest difference in the value of an Actuation command that would result in a value change of the ActuatableProperty being acted on, under the defined Conditions."""@en ;
+      As an Actuator Property: the smallest difference in the value of an Actuation command that would result in a value change of the Property being acted on, under the defined Conditions."""@en ;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:isDefinedBy ssn-system: .
 
     ssn-system:ResponseTime a owl:Class ;
       rdfs:label "Response Time"@en ;
-      skos:definition """As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.
+      skos:definition """As a Sensor Property: the time between a (step) change in the value of an observed Property and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.
 
-      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions."""@en ;
-      rdfs:comment """As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.
+      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on Property, under the defined Conditions."""@en ;
+      rdfs:comment """As a Sensor Property: the time between a (step) change in the value of an observed Property and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.
 
-      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions."""@en ;
+      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on Property, under the defined Conditions."""@en ;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:isDefinedBy ssn-system: .
 
     ssn-system:Selectivity a owl:Class ;
       rdfs:label "Selectivity"@en ;
-      skos:definition """As a Sensor Property: Selectivity is a Property of a Sensor whereby it provides observed values for one or more ObservableProperties such that the Results for each ObservableProperty are independent of other Properties in the FeatureOfInterest being investigated,  under the defined Conditions.
+      skos:definition """As a Sensor Property: Selectivity is a Property of a Sensor whereby it provides observed values for one or more Properties such that the Results for each Property are independent of other Properties in the FeatureOfInterest being investigated,  under the defined Conditions.
 
-      As an Actuator Property: Selectivity is a Property of an Actuator whereby it acts on one or more ActuatableProperties such as the Results for each ActuatableProperty are independent of other Properties in the FeatureOfInterest being acted on, under the defined Conditions."""@en ;
-      rdfs:comment """As a Sensor Property: Selectivity is a Property of a Sensor whereby it provides observed values for one or more ObservableProperties such that the Results for each ObservableProperty are independent of other Properties in the FeatureOfInterest being investigated,  under the defined Conditions.
+      As an Actuator Property: Selectivity is a Property of an Actuator whereby it acts on one or more Properties such as the Results for each Property are independent of other Properties in the FeatureOfInterest being acted on, under the defined Conditions."""@en ;
+      rdfs:comment """As a Sensor Property: Selectivity is a Property of a Sensor whereby it provides observed values for one or more Properties such that the Results for each Property are independent of other Properties in the FeatureOfInterest being investigated,  under the defined Conditions.
 
-      As an Actuator Property: Selectivity is a Property of an Actuator whereby it acts on one or more ActuatableProperties such as the Results for each ActuatableProperty are independent of other Properties in the FeatureOfInterest being acted on, under the defined Conditions."""@en ;
+      As an Actuator Property: Selectivity is a Property of an Actuator whereby it acts on one or more Properties such as the Results for each Property are independent of other Properties in the FeatureOfInterest being acted on, under the defined Conditions."""@en ;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:isDefinedBy ssn-system: .
 
     ssn-system:Sensitivity a owl:Class ;
       rdfs:label "Sensitivity"@en ;
-      skos:definition """As a Sensor Property: Sensitivity is the quotient of the change in a Result of Observation and the corresponding change in a value of an ObservableProperty being observed, under the defined Conditions.
+      skos:definition """As a Sensor Property: Sensitivity is the quotient of the change in a Result of Observation and the corresponding change in a value of a Property being observed, under the defined Conditions.
 
-       As an Actuator Property: Sensitivity is the quotient of the change in a command of Actuation and the corresponding change in a value of an ActuatableProperty being acted on, under the defined Conditions."""@en ;
-      rdfs:comment """As a Sensor Property: Sensitivity is the quotient of the change in a Result of Observation and the corresponding change in a value of an ObservableProperty being observed, under the defined Conditions.
+       As an Actuator Property: Sensitivity is the quotient of the change in a command of Actuation and the corresponding change in a value of a Property being acted on, under the defined Conditions."""@en ;
+      rdfs:comment """As a Sensor Property: Sensitivity is the quotient of the change in a Result of Observation and the corresponding change in a value of a Property being observed, under the defined Conditions.
 
-       As an Actuator Property: Sensitivity is the quotient of the change in a command of Actuation and the corresponding change in a value of an ActuatableProperty being acted on, under the defined Conditions."""@en ;
+       As an Actuator Property: Sensitivity is the quotient of the change in a command of Actuation and the corresponding change in a value of a Property being acted on, under the defined Conditions."""@en ;
       rdfs:subClassOf ssn-system:SystemProperty ;
       rdfs:isDefinedBy ssn-system: .
 
@@ -267,6 +260,7 @@ ssn-system:hasOperatingRange a owl:ObjectProperty ;
     In the absence of OperatingProperties, simply describes the Conditions in which a System is expected to operate.
 
     The System continues to operate as defined using SystemCapability. If, however, the SurvivalRange is violated, the System is 'damaged' and SystemCapability specifications may no longer hold."""@en ;
+    rdfs:subClassOf ssn-system:Range ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn-system:inCondition ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn-system:inCondition ] ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty [ owl:inverseOf ssn-system:hasOperatingRange ] ; owl:allValuesFrom ssn:System ] ;
@@ -301,6 +295,7 @@ ssn-system:hasOperatingRange a owl:ObjectProperty ;
       rdfs:label "Operating Power Range"@en ;
       skos:definition "Power range in which a System is expected to operate in the specified Conditions."@en ;
       rdfs:comment "Power range in which a System is expected to operate in the specified Conditions."@en ;
+      rdfs:subClassOf ssn-system:Range;
       rdfs:subClassOf ssn-system:OperatingProperty ;
       rdfs:isDefinedBy ssn-system: .
 
@@ -326,6 +321,7 @@ ssn-system:hasSurvivalRange a owl:ObjectProperty ;
     In the absence of SurvivalProperties, simply describes the Conditions a System can be exposed to without damage. For example, the temperature range a System can withstand before being considered damaged.
 
     The System continues to operate as defined using SystemCapability. If, however, the OperatingProperty is violated, the System is operating 'out of operating range' and SystemCapability specifications may no longer hold."""@en ;
+    rdfs:subClassOf ssn-system:Range ;
     rdfs:subClassOf ssn:Property ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn-system:inCondition ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
     rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn-system:hasSurvivalProperty ; owl:allValuesFrom ssn-system:SurvivalProperty ] ;
