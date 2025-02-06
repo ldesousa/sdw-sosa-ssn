@@ -11,7 +11,7 @@ ex:ts159c
   a sosa:ObservationCollection ;
   sosa:hasFeatureOfInterest ex:station223 ;
   sosa:observedProperty ex:p1 ;
-  sosa:madeBySensor ex:fjk39 ;
+  sosa:madeBySensor ex:fooglemeter39 ;
   sosa:phenomenonTime [
     a time:Interval ;
     time:hasBeginning [ 
@@ -63,5 +63,5 @@ ex:t4
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
-ex:fjk39 a sosa:Sensor .
+ex:fooglemeter39 a sosa:Sensor .
 unit:M-PER-SEC a rdfs:Datatype .

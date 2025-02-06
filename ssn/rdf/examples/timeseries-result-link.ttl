@@ -10,7 +10,7 @@ ex:ts159l
   a sosa:Observation ;
   sosa:hasFeatureOfInterest ex:station223 ;
   sosa:observedProperty ex:p1 ;
-  sosa:madeBySensor ex:fjk39 ;
+  sosa:madeBySensor ex:fooglemeter39 ;
   sosa:phenomenonTime [
     a time:Interval ;
     time:hasBeginning [ 
@@ -28,4 +28,4 @@ ex:ts159l
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
-ex:fjk39 a sosa:Sensor .
+ex:fooglemeter39 a sosa:Sensor .

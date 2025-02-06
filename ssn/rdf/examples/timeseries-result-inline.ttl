@@ -12,7 +12,7 @@ ex:ts159i
   a sosa:Observation ;
   sosa:hasFeatureOfInterest ex:station223 ;
   sosa:observedProperty ex:p1 ;
-  sosa:madeBySensor ex:fjk39 ;
+  sosa:madeBySensor ex:fooglemeter39 ;
   sosa:phenomenonTime [
     a time:Interval ;
     time:hasBeginning [ 
@@ -25,16 +25,18 @@ ex:ts159i
     ] ;
   ] ;
   sosa:resultTime "2017-04-15T20:03:30+00:00"^^xsd:dateTime ;
-  sosa:hasSimpleResult """2017-04-15T20:00:00+00:00 3.24
-  2017-04-15T20:01:00+00:00 3.21
-  2017-04-15T20:02:00+00:00 3.15 
-  2017-04-15T20:03:00+00:00 3.15"""^^ex:vector2D-T-M-PER-SEC ;
-  rdfs:comment "The result of the observation has four values, where each value is composed of a timestamp and a quantity in metres per second."@en ;
+  sosa:hasSimpleResult """2017-04-15T20:00:00+00:00,3.24
+  2017-04-15T20:01:00+00:00,3.21
+  2017-04-15T20:02:00+00:00,3.15
+  2017-04-15T20:03:00+00:00,3.15"""^^ex:CSV ;
+  rdfs:comment """The result of the observation is encoded as a CSV literal.  
+  In this example, the CSV has four rows each representing a member of the time-series.  
+  Each member value is composed of a timestamp, and a quantity in metres per second."""@en ;
 .
-ex:ex:vector2D-T-M-PER-SEC a rdfs:DataType ;
-  skos:definition "A 2-D vector, each value is a timestamp and a quantity in metres per second."@en ;
-  rdfs:comment "This datatype is used to represent a series of results, where each result is composed of a timestamp and a quantity in metres per second."@en ;
+ex:CSV a rdfs:DataType ;
+  skos:definition "An N-D vector, each row representing a member composed of N comma-separated values."@en ;
+  rdfs:comment "This datatype is informative only, and is not part of the SSN Ontology."@en ;
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
-ex:fjk39 a sosa:Sensor .
+ex:fooglemeter39 a sosa:Sensor .
