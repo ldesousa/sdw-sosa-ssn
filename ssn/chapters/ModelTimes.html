@@ -20,9 +20,18 @@
 <p>
     A forecast may be represented as an observation where the value of <code>sosa:phenomenonTime</code> is later in
     time than the <code>sosa:resultTime</code>.
-    The time when the Observation execution was completed is before the time that the Result of the
-    observation applies to the FeatureOfInterest.
+    The time when the observation execution was completed is before the time that the result of the observation applies
+    to the FeatureOfInterest.
 </p>
+<figure id="forecast">
+    <embed alt="Forecast modeled as an observation" src="./images/forecast.svg" style="width:60%" />
+    <figcaption>Temperature grid forecast, modeled as an Observation in which the result time is before the phenomenon
+        time, which is when the result applies to the feature of interest.
+        <br>
+        <em><a href="#class-diagram">Explanation of the notation used in class diagrams</a></em>.
+    </figcaption>
+</figure>
+
 <h5>Serialised in Turtle</h5>
 <pre class="example" data-include="./rdf/examples/forecast.ttl" data-include-format="text"></pre>
 
@@ -64,7 +73,7 @@
 </p>
 
 <figure id="diet">
-    <img alt="Observation with phenomemon-time in the deep past - paleo diet" src="./images/diet.png" />
+    <embed alt="Observation with phenomemon-time in the deep past - paleo diet" src="./images/diet.svg" style="width:70%" />
     <figcaption>Observation with phenomemon-time in the deep past.
     </figcaption>
 </figure>
@@ -78,8 +87,8 @@
     These provide input-values to the final observation (at the bottom of <a href="#paleo-atmosphere"></a>).
 </p>
 <figure id="paleo-atmosphere">
-    <img alt="Observation with phenomemon-time in the deep past - atmospheric CO2"
-        src="./images/paleo-atmosphere.png" />
+    <embed alt="Observation with phenomemon-time in the deep past - atmospheric CO2"
+        src="./images/paleo-atmosphere.svg" style="width:80%" />
     <figcaption>Observation with phenomemon-time in the deep past, constructed from the output of two primitive
         observations.
     </figcaption>
