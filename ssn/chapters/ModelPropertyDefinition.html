@@ -27,7 +27,7 @@
     child as follows:
 </p>
 <figure id="Temperature-i-adopt">
-    <img alt="Constrained temperature definition" src="./images/Temperature-i-adopt.svg" style="width:90%" />
+    <embed alt="Constrained temperature definition" src="./images/Temperature-i-adopt.svg" style="width:90%" />
     <figcaption>
         Definition of a constrained temperature property for a sick child, using the I-ADOPT vocabulary.
         <br>
@@ -45,13 +45,13 @@
 <h4>Feature-specific properties</h4>
 <p>
     Most commonly an instance of <a href="#SOSAProperty"><code>sosa:Property</code></a> is generic to many
-    features of interest (e.g. <code>ex:Temperature</code>, <code>ex:OnOffStatus</code>).
+    features of interest (e.g., <code>ex:Temperature</code>, <code>ex:OnOffStatus</code>).
     The catalogs listed above support this use case.
 </p>
 <p>
     Alternatively, a property may be made specific to a single feature of interest using
     <a href="#SOSAisPropertyOf"><code>sosa:isPropertyOf</code></a>
-    (e.g. <code>ex:SickChildATemperature</code>, <code>ex:Room34LightStatus</code>).
+    (e.g., <code>ex:SickChildATemperature</code>, <code>ex:Room34LightStatus</code>).
     Specific properties of individual features would not usually appear in a catalogue of reusable properties,
     but this pattern is used in some applications.
     In that context, a key requirement is to relate the specific property to the general case for the underlying
