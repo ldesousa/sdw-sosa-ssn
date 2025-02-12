@@ -1,4 +1,3 @@
-<!-- <section id="OMS" class="normative"> -->
 <h3>OMS Extension Module</h3>
 <p>
   This section introduces extensions to the SSN Ontology to provide a canonical RDF implementation of [[[OMS]]] (ISO
@@ -51,7 +50,8 @@
 
 <section id="OMS-namespaces">
   <h4>Namespaces</h4>
-  <p>The following namespace prefixes are used in the RDF implementation of OMS:</p>
+  <p>
+    The following namespace prefixes are used in the RDF implementation of OMS:</p>
   <table>
     <tbody>
       <tr>
@@ -132,16 +132,19 @@
     </p>
   </div>
 
-  <p class="note">Terms in the <code>sosa-oms:</code> namespace were added in the 2024 Update.
+  <p class="note">Terms in the <code>sosa-oms:</code> namespace were added in the 2025 update.
     These are non-normative, pending further implementation experience</p>
   <p>
 
   <section class="informative specterm sosa" id="OMSObservingProcedure" about="sosa-oms:ObservingProcedure"
     typeof="owl:Class">
     <h6><a href="#OMSObservingProcedure">sosa-oms:ObservingProcedure</a></h6>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/ObservingProcedure</p>
-    <p><strong>an OWL Class</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/ObservingProcedure
+    </p>
+    <p>
+      <strong>an OWL Class</strong>
+    </p>
     <p>
       <em property="rdfs:label">Observing Procedure</em> -
       <span property="skos:definition">The description of steps performed in order to determine the value of an
@@ -215,7 +218,7 @@
             onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
             additional SSN axioms</a>]</span>
       </span>
-      <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+      <span class="back">[<a href="#OMS">Back to module overview</a>]</span>
       <span class="back">[<a href="#Overview">Back to top</a>]</span>
     </div>
   </section>
@@ -223,9 +226,12 @@
   <section class="informative specterm sosa" id="OMSPreparationProcedure" about="sosa-oms:PreparationProcedure"
     typeof="owl:Class">
     <h5><a href="#OMSPreparationProcedure">sosa-oms:PreparationProcedure</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/PreparationProcedure</p>
-    <p><strong>an OWL Class</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/PreparationProcedure
+    </p>
+    <p>
+      <strong>an OWL Class</strong>
+    </p>
     <p>
       <em property="rdfs:label">Preparation Procedure</em> -
       <span property="rdfs:comment skos:definition">The description of preparation steps performed on a
@@ -265,9 +271,12 @@
 
   <section class="informative specterm" id="OMSPreparationStep" about="sosa-oms:PreparationStep" typeof="owl:Class">
     <h5><a href="#OMSPreparationStep">sosa-oms:PreparationStep</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/PreparationStep</p>
-    <p><strong>an OWL Class</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/PreparationStep
+    </p>
+    <p>
+      <strong>an OWL Class</strong>
+    </p>
     <p>
       <em property="rdfs:label">Preparation Step</em> -
       <span property="rdfs:comment skos:definition">A PreparationStep is an individual step pertaining to a Sample
@@ -294,9 +303,12 @@
   <section class="informative specterm sosa" id="OMSSamplingProcedure" about="sosa-oms:SamplingProcedure"
     typeof="owl:Class">
     <h6><a href="#OMSSamplingProcedure">sosa-oms:SamplingProcedure</a></h6>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/SamplingProcedure</p>
-    <p><strong>an OWL Class</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/SamplingProcedure
+    </p>
+    <p>
+      <strong>an OWL Class</strong>
+    </p>
     <p>
       <em property="rdfs:label">Sampling Procedure</em> -
       <span property="skos:definition">The description of steps performed by a <a href="#SOSASampler">Sampler</a>
@@ -339,9 +351,12 @@
   <section class="informative specterm" id="OMShasPreparationStep" about="sosa-oms:hasPreparationStep"
     typeof="owl:ObjectProperty">
     <h5><a href="#OMShasPreparationStep">sosa-oms:hasPreparationStep</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/hasPreparationStep</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/hasPreparationStep
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">has preparation step</em> -
       <span property="rdfs:comment skos:definition">Link to a preparation step used to prepare the sample</span>
@@ -379,9 +394,12 @@
   <section class="informative specterm" id="OMSmadeOnPlatform" about="sosa-oms:madeOnPlatform"
     typeof="owl:ObjectProperty">
     <h5><a href="#OMSmadeOnPlatform">sosa-oms:madeOnPlatform</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/madeOnPlatform</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/madeOnPlatform
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">made on platform</em> -
       <span property="rdfs:comment skos:definition">Relation between an Observation and the Platform the Sensor
@@ -423,9 +441,12 @@
 
   <section class="informative specterm" id="OMSmetadata" about="sosa-oms:metadata" typeof="owl:ObjectProperty">
     <h5><a href="#OMSmetadata">sosa-oms:metadata</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/metadata</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/metadata
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">metadata</em> -
       <span property="rdfs:comment skos:definition">Links an individual to a metadata description</span>
@@ -477,9 +498,12 @@
   <section class="informative specterm" id="OMSobservationType" about="sosa-oms:observationType"
     typeof="owl:ObjectProperty">
     <h5><a href="#OMSobservationType">sosa-oms:observationType</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/observationType</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/observationType
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">observation type</em> -
       <span property="rdfs:comment skos:definition">Information providing further detail on the type of
@@ -513,9 +537,12 @@
   <section class="informative specterm" id="OMSpreparedSample" about="sosa-oms:preparedSample"
     typeof="owl:ObjectProperty">
     <h5><a href="#OMSpreparedSample">sosa-oms:preparedSample</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/preparedSample</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/preparedSample
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">prepared sample</em> -
       <span property="rdfs:comment skos:definition">The Sample on which the PreparationProcedure is
@@ -555,9 +582,12 @@
   <section class="informative specterm" id="OMSprocessingDetails" about="sosa-oms:processingDetails"
     typeof="owl:ObjectProperty">
     <h5><a href="#OMSprocessingDetails">sosa-oms:processingDetails</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/processingDetails</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/processingDetails
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">processing details</em> -
       <span property="rdfs:comment skos:definition">The PreparationProcedure used by the PreparationStep.</span>
@@ -597,9 +627,12 @@
   <section class="informative specterm" id="OMSrelatedSampling" about="sosa-oms:relatedSampling"
     typeof="owl:ObjectProperty">
     <h5><a href="#OMSrelatedSampling">sosa-oms:relatedSampling</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/relatedSampling</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/relatedSampling
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">related sampling</em> -
       <span property="rdfs:comment skos:definition">Relation to an act of Sampling.</span>
@@ -637,9 +670,12 @@
   <section class="informative specterm" id="OMSsamplePreparationStep" about="sosa-oms:samplePreparationStep"
     typeof="owl:ObjectProperty">
     <h5><a href="#OMSsamplePreparationStep">sosa-oms:samplePreparationStep</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/samplePreparationStep</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/samplePreparationStep
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">sample preparation step</em> -
       <span property="rdfs:comment skos:definition">A PreparationStep that uses the PreparationProcedure.</span>
@@ -678,9 +714,12 @@
 
   <section class="informative specterm" id="OMSvalidTime" about="sosa-oms:validTime" typeof="owl:ObjectProperty">
     <h5><a href="#OMSvalidTime">sosa-oms:validTime</a></h5>
-    <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/validTime</p>
-    <p><strong>an OWL Object Property</strong></p>
-
+    <p class="crossreference">
+      <strong>IRI:</strong> http://www.w3.org/ns/sosa/oms/validTime
+    </p>
+    <p>
+      <strong>an OWL Object Property</strong>
+    </p>
     <p>
       <em property="rdfs:label">valid time</em> -
       <span property="rdfs:comment skos:definition">The time interval during which the result is assumed to be
@@ -726,7 +765,8 @@
 
 <section id="OMS-Class-SOSA">
   <h4>Class Alignments - SOSA focus</h4>
-  <p>The following classes from the SSN Ontology and this extension implement UML classes from OMS as indicated: </p>
+  <p>
+    The following classes from the SSN Ontology and this extension implement UML classes from OMS as indicated: </p>
   <table data-sortable="true">
     <tbody>
       <tr>
@@ -830,7 +870,8 @@
 
 <section id="OMS-Class-OMS">
   <h4>Class Alignments - OMS focus</h4>
-  <p>The following UML classes in OMS are implemented by classes from the SSN Ontology and this extension as indicated:
+  <p>
+    The following UML classes in OMS are implemented by classes from the SSN Ontology and this extension as indicated:
   </p>
   <table data-sortable="true">
     <tbody>
@@ -935,7 +976,8 @@
 
 <section id="OMS-Property-SOSA">
   <h4>Property Alignments - SOSA focus</h4>
-  <p>The following properties from the SSN Ontology and this extension implement attributes and association roles from
+  <p>
+    The following properties from the SSN Ontology and this extension implement attributes and association roles from
     OMS as indicated: </p>
   <table data-sortable="true">
     <tbody>
@@ -1154,7 +1196,8 @@
 
 <section id="OMS-Property-OMS">
   <h4>Property Alignments - OMS focus</h4>
-  <p>The following attributes and association roles from OMS are implemented by properties from the SSN Ontology and
+  <p>
+    The following attributes and association roles from OMS are implemented by properties from the SSN Ontology and
     this extension as indicated: </p>
   <table data-sortable="true">
     <tbody>
@@ -1365,4 +1408,3 @@
     </tbody>
   </table>
 </section>
-<!--  </section>  -->

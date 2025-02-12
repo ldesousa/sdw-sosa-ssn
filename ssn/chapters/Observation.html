@@ -1,16 +1,15 @@
-<!--  <section id="Observation">  -->
 <h3>Observations</h3>
-
 <section class="informative" id="Observations-overview">
     <h4>Overview</h4>
-    <p>The following figure provides an overview of the core classes
+    <p>
+        The following figure provides an overview of the core classes
         and properties that are specifically related to modeling Observations.
     </p>
     <div>
         <figure>
-            <a href="images/Observation.png"><img
-                    alt="Observation diagram; showing Observation, ObservationCollection, Procedure, Sensor, ObservableProperty, FeatureOfInterest"
-                    src="images/Observation.png"></a>
+            <embed
+                alt="Observation diagram; showing Observation, ObservationCollection, Procedure, Sensor, ObservableProperty, FeatureOfInterest"
+                src="images/Observation.svg">
             <figcaption>
                 Classes and relationships involved in Observation.
                 <br>
@@ -26,7 +25,8 @@
 
 <section id="Observations-specification">
     <h4>Specification</h4>
-    <p>This section introduces the following classes and properties:</p>
+    <p>
+        This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
             <a href="#SOSAObservation">sosa:Observation</a>
@@ -54,8 +54,12 @@
 
     <section class="specterm sosa" id="SOSAObservation" about="sosa:Observation" typeof="owl:Class">
         <h5><a href="#SOSAObservation">sosa:Observation</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation</p>
-        <p><strong>an OWL Class</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
         <p>
             <em property="rdfs:label">Observation</em> -
             <span property="skos:definition">Act of carrying out an (Observation)
@@ -92,9 +96,10 @@
         </p>
 
 
-        <p class="note">The different time-properties on a <a href="#SOSAObservation">sosa:Observation</a> support the
+        <p class="note">
+            The different time-properties on a <a href="#SOSAObservation">sosa:Observation</a> support the
             description of forecasts and predictions as well as observations relating to various historical scenarios.
-            See <a href="#times">Temporal properties</a> for patterns related to these.</p>
+            See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
 
 
         <table>
@@ -241,7 +246,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -249,11 +254,14 @@
     <section class="informative specterm sosa" id="SOSAObservationCollection" about="sosa:ObservationCollection"
         typeof="owl:Class">
         <h5><a href="#SOSAObservationCollection">sosa:ObservationCollection</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservationCollection</p>
-        <p><strong>an OWL Class</strong></p>
-
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservationCollection
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
         <p class="note">
-            ObservationCollection added in the 2024 Update
+            ObservationCollection added in the 2025 update
             This term is non-normative, pending further implementation experience
         </p>
         <p class="note">
@@ -425,15 +433,19 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSASensor" about="sosa:Sensor" typeof="owl:Class">
         <h5><a href="#SOSASensor">sosa:Sensor</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor</p>
-        <p><strong>an OWL Class</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
         <p>
             <em property="rdfs:label">Sensor</em> -
             <span property="skos:definition">An identifiable entity that can generate <a
@@ -448,8 +460,9 @@
             </span>
         </p>
 
-        <p class="note">A Sensor may have a geographic location.
-            See <a href="#systems-platforms-deployments">Location and Geometry</a> for patterns to describe this.</p>
+        <p class="note">
+            A Sensor may have a geographic location.
+            See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.</p>
 
         <table>
             <tbody>
@@ -538,15 +551,19 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAStimulus" about="sosa:Stimulus" typeof="owl:Class">
         <h5><a href="#SOSAStimulus">sosa:Stimulus</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Stimulus</p>
-        <p><strong>an OWL Class</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/Stimulus
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
         <p>
             <em property="rdfs:label">Stimulus</em> -
             <span property="skos:definition">An event in the real world that 'triggers' the
@@ -607,15 +624,19 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm" id="SOSAdetects" about="sosa:detects" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAdetects">sosa:detects</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/detects</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/detects
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">detects</em> -
             <span property="skos:definition">A relation from a <a href="#SOSASensor">Sensor</a>
@@ -654,18 +675,19 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="informative specterm" id="SOSAhasProxy" about="sosa:hasProxy" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAhasProxy">sosa:hasProxy</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasProxy</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">hasProxy added in 2024 update.
-            This term is non-normative, pending further implementation experience</p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasProxy
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">has proxy</em> -
             <span property="skos:definition">A relation from an <a href="#SOSAProperty">sosa:Property</a>
@@ -711,18 +733,19 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="informative specterm" id="SOSAisDetectedBy" about="sosa:isDetectedBy" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAisDetectedBy">sosa:isDetectedBy</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isDetectedBy</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">isDetectedBy added in 2024 update.
-            This term is non-normative, pending further implementation experience</p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isDetectedBy
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">is detected by</em> -
             <span property="skos:definition">A relation from a <a href="#SOSAStimulus">Stimulus</a> to the
@@ -760,16 +783,21 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAisObservedBy" about="sosa:isObservedBy" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAisObservedBy">sosa:isObservedBy</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isObservedBy</p>
-        <p><strong>an OWL Object Property</strong></p>
-        <p class="note">The 2017 edition defined the term ObservableProperty as the domain of <a
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isObservedBy
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            The 2017 edition defined the term ObservableProperty as the domain of <a
                 href="#SOSAisObservedBy">sosa:isObservedBy</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2024 edition.
         </p>
@@ -808,17 +836,22 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm" id="SOSAisProxyFor" about="sosa:isProxyFor" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAisProxyFor">sosa:isProxyFor</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isProxyFor</p>
-        <p><strong>an OWL Object Property</strong></p>
-        <p class="note">The 2017 edition defined the term ObservableProperty as the range of <a
-                href="#SOSAisProxyFor">sosa:isProxyFor</a>.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isProxyFor
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            The 2017 edition defined the term ObservableProperty as the range of
+            <a href="#SOSAisProxyFor">sosa:isProxyFor</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2024 edition.
         </p>
         <p>
@@ -870,15 +903,19 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAmadeBySensor" about="sosa:madeBySensor" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAmadeBySensor">sosa:madeBySensor</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySensor</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySensor
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">made by <a href="#SOSASensor">Sensor</a></em> -
             <span property="skos:definition">Relation between an <a href="#SOSAObservation">Observation</a> and
@@ -922,15 +959,19 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAmadeObservation" about="sosa:madeObservation" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAmadeObservation">sosa:madeObservation</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeObservation</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeObservation
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">made observation</em> -
             <span property="skos:definition">Relation between a <a href="#SOSASensor">Sensor</a>
@@ -970,7 +1011,7 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -978,10 +1019,14 @@
     <section class="informative specterm" id="SOSAobservationRelatedTo" about="sosa:observationRelatedTo"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAobservationRelatedTo">sosa:observationRelatedTo</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/observationRelatedTo</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">observationRelatedTo added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/observationRelatedTo
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            observationRelatedTo added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
 
         <p>
@@ -1037,17 +1082,22 @@
         </table>
 
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAobservedProperty" about="sosa:observedProperty" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAobservedProperty">sosa:observedProperty</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/observedProperty</p>
-        <p><strong>an OWL Object Property</strong></p>
-        <p class="note">The 2017 edition defined the term ObservableProperty as the range of <a
-                href="#SOSAobservedProperty">sosa:observedProperty</a>.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/observedProperty
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            The 2017 edition defined the term ObservableProperty as the range of
+            <a href="#SOSAobservedProperty">sosa:observedProperty</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2024 edition.
         </p>
         <p class="note">
@@ -1104,17 +1154,22 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAobserves" about="sosa:observes" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAobserves">sosa:observes</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/observes</p>
-        <p><strong>an OWL Object Property</strong></p>
-        <p class="note">The 2017 edition defined the term ObservableProperty as the range of <a
-                href="#SOSAobserves">sosa:observes</a>.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/observes
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            The 2017 edition defined the term ObservableProperty as the range of
+            <a href="#SOSAobserves">sosa:observes</a>.
             That specialization of <a href="#SOSAProperty">sosa:Property</a> is deprecated in this 2024 edition.
         </p>
         <p>
@@ -1166,18 +1221,19 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="informative specterm" id="SOSAoriginated" about="sosa:originated" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAoriginated">sosa:originated</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/originated</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">originated added in 2024 update.
-            This term is non-normative, pending further implementation experience</p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/originated
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">originated</em> -
             <span property="skos:definition">Relation between a <a href="#SOSAStimulus">Stimulus</a> and the
@@ -1213,17 +1269,21 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="informative specterm" id="SOSAqualityOf" about="sosa:qualityOf" typeof="owl:ObjectProperty">
         <h6><a href="#SOSAqualityOf">sosa:qualityOf</a></h6>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/qualityOf</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">qualityOf added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/qualityOf
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            qualityOf added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">quality of</em> -
@@ -1258,7 +1318,7 @@
         </table>
 
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -1266,10 +1326,15 @@
     <section class="informative specterm" id="SOSArelatedObservation" about="sosa:relatedObservation"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSArelatedObservation">sosa:relatedObservation</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/relatedObservation</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/relatedObservation
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
 
-        <p class="note">relatedObservation added in 2024 update.
+        <p class="note">
+            relatedObservation added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">related observation</em> -
@@ -1324,17 +1389,21 @@
         </table>
 
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="informative specterm" id="SOSAresultQuality" about="sosa:resultQuality" typeof="owl:ObjectProperty">
         <h6><a href="#SOSAresultQuality">sosa:resultQuality</a></h6>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/resultQuality</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">resultQuality added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/resultQuality
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            resultQuality added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">observation result quality</em> -
@@ -1383,17 +1452,22 @@
         </table>
 
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="informative specterm" id="SOSAwasObservedBy" about="sosa:wasObservedBy" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAwasObservedBy">sosa:wasObservedBy</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/wasObservedBy</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/wasObservedBy
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
 
-        <p class="note">wasObservedBy added in 2024 update.
+        <p class="note">
+            wasObservedBy added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">was observed by</em> -
@@ -1431,15 +1505,19 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm" id="SOSAwasOriginatedBy" about="sosa:wasOriginatedBy" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAwasOriginatedBy">sosa:wasOriginatedBy</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/wasOriginatedBy</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/wasOriginatedBy
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">was originated by</em> -
             <span property="skos:definition">Relation between an <a href="#SOSAObservation">Observation</a> and
@@ -1475,10 +1553,9 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Observation">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Observations-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
 </section>
-<!--  </section>  -->

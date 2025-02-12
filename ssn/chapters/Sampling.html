@@ -1,15 +1,15 @@
-<!--  <section id="Sampling">  -->
 <h3>Sampling</h3>
 
-<section class="informative" id="Sampling-overview">
+<section class="informative" id="Samplings-overview">
     <h4>Overview</h4>
-    <p>The following figure provides an overview of the core classes
+    <p>
+        The following figure provides an overview of the core classes
         and properties that are specifically related to modeling Samplings.
     </p>
     <figure>
-        <a href="images/Sampling.png"><img
-                alt="Sampling and samples diagram; showing Sampling, SamplingCollection, Procedure, Sampler, Sample, SampleCollection, FeatureOfInterest"
-                src="images/Sampling.png"></a>
+        <embed
+            alt="Sampling and samples diagram; showing Sampling, SamplingCollection, Procedure, Sampler, Sample, SampleCollection, FeatureOfInterest"
+            src="images/Sampling.svg">
         <figcaption>
             Classes and relationships involved in Sampling
             <br>
@@ -22,7 +22,8 @@
 <section id="Sampling-specification">
     <h4>Specification</h4>
 
-    <p>This section introduces the following classes and properties:</p>
+    <p>
+        This section introduces the following classes and properties:</p>
     <div class="azlist">
         <p>
             <a href="#SOSAMaterialSample">sosa:MaterialSample</a>
@@ -50,10 +51,14 @@
 
     <section class="informative specterm sosa" id="SOSAMaterialSample" about="sosa:MaterialSample" typeof="owl:Class">
         <h5><a href="#SOSAMaterialSample">sosa:MaterialSample</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/MaterialSample</p>
-        <p><strong>an OWL Class</strong></p>
-
-        <p class="note">MaterialSample added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/MaterialSample
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="note">
+            MaterialSample added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">Material Sample</em> -
@@ -107,15 +112,19 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSASample" about="sosa:Sample" typeof="owl:Class">
         <h5><a href="#SOSASample">sosa:Sample</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sample</p>
-        <p><strong>an OWL Class</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sample
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
         <p>
             <em property="rdfs:label">Sample</em> -
             <span property="skos:definition">Feature which is intended to be representative of a
@@ -126,12 +135,13 @@
             In the previous edition Sample was axiomatized as a sub-class of
             <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
             The subclass relationship is removed in this edition.
-            The relationship between types and <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>
-            is <a href="#model-domain">explained further below</a>.
+            See <a href="#ModelDomainTypes">Domain types and FeatureOfInterest</a> for a discussion of the relationship
+            between types and <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>.
         </p>
 
-        <p class="note">A Sample may have a geographic location.
-            See <a href="#samples-features">Location and Geometry</a> for patterns to describe this.</p>
+        <p class="note">
+            A Sample may have a geographic location.
+            See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.</p>
 
         <table>
             <tbody>
@@ -259,7 +269,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -267,10 +277,14 @@
     <section class="informative specterm sosa" id="SOSASampleCollection" about="sosa:SampleCollection"
         typeof="owl:Class">
         <h5><a href="#SOSASampleCollection">sosa:SampleCollection</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/SampleCollection</p>
-        <p><strong>an OWL Class</strong></p>
-
-        <p class="note">SampleCollection added in the 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/SampleCollection
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="note">
+            SampleCollection added in the 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">Sample Collection</em> -
@@ -374,29 +388,35 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSASampler" about="sosa:Sampler" typeof="owl:Class">
         <h5><a href="#SOSASampler">sosa:Sampler</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sampler</p>
-        <p><strong>an OWL Class</strong></p>
-        <em property="rdfs:label">Sampler</em> -
-        <span property="skos:definition">A device that implements a (Sampling) <a href="#SOSAProcedure">Procedure</a> to
-            create or transform one or more samples.</span>
-        <br>
-
-        <p class="note">A Sampler may have a geographic location.
-            See <a href="#systems-platforms-deployments">Location and Geometry</a> for patterns to describe this.</p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sampler
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p>
+            <em property="rdfs:label">Sampler</em> -
+            <span property="skos:definition">A device that implements a (Sampling)
+                <a href="#SOSAProcedure">Procedure</a> to create or transform one or more samples.</span>
+        </p>
+        <p class="note">
+            A Sampler may have a geographic location.
+            See <a href="#ModelLocation">Location and Geometry</a> for patterns to describe this.</p>
 
         <table>
             <tbody>
                 <tr>
                     <th>Examples</th>
                     <td><span property="skos:example">A ball mill, diamond drill, hammer, hypodermic syringe and needle,
-                            image <a href="#SOSASensor">Sensor</a> or a soil auger can all act as <a href="#SOSASampler">Samplers</a>.
+                            image <a href="#SOSASensor">Sensor</a> or a soil auger can all act as <a
+                                href="#SOSASampler">Samplers</a>.
                             Sometimes the distinction between the <a href="#SOSASampler">Sampler</a> and the
                             <a href="#SOSASampler">Sensor</a> is not evident, if they are packaged as a unit.
                             <br><br>
@@ -453,25 +473,29 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSASampling" about="sosa:Sampling" typeof="owl:Class">
         <h5><a href="#SOSASampling">sosa:Sampling</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sampling</p>
-        <p><strong>an OWL Class</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/Sampling
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
         <p>
             <em property="rdfs:label">Sampling</em> -
             <span property="skos:definition">An act of <a href="#SOSASampling">Sampling</a> carries out a
                 (Sampling) <a href="#SOSAProcedure">Procedure</a> to create one or more <a
                     href="#SOSASample">Samples</a>.</span>
         </p>
-        <p class="note">The different time-properties on a <a href="#SOSASampling">sosa:Sampling</a> support
-            the description of plans, forecasts and predictions as well as descriptions of various historical
-            scenarios.
-            See <a href="#times">Temporal properties</a> for patterns related to these.</p>
+        <p class="note">
+            The different time-properties on a <a href="#SOSASampling">sosa:Sampling</a> support
+            the description of plans, forecasts and predictions as well as descriptions of various historical scenarios.
+            See <a href="#ModelTimes">Temporal properties</a> for patterns related to these.</p>
         <table>
             <tbody>
                 <tr>
@@ -574,7 +598,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -582,10 +606,14 @@
     <section class="informative specterm sosa" id="SOSASamplingCollection" about="sosa:SamplingCollection"
         typeof="owl:Class">
         <h5><a href="#SOSASamplingCollection">sosa:SamplingCollection</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/SamplingCollection</p>
-        <p><strong>an OWL Class</strong></p>
-
-        <p class="note">SamplingCollection added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/SamplingCollection
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="note">
+            SamplingCollection added in 2025 update.
             This term is non-normative pending further implementation experience</p>
         <p>
             <em property="rdfs:label">Sampling Collection</em> -
@@ -729,17 +757,21 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="informative specterm sosa" id="SOSASpatialSample" about="sosa:SpatialSample" typeof="owl:Class">
         <h5><a href="#SOSASpatialSample">sosa:SpatialSample</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/SpatialSample</p>
-        <p><strong>an OWL Class</strong></p>
-
-        <p class="note">SpatialSample added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/SpatialSample
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
+        <p class="note">
+            SpatialSample added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">Spatial Sample</em> -
@@ -805,7 +837,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -813,11 +845,14 @@
     <section class="informative specterm sosa" id="SOSAStatisticalSample" about="sosa:StatisticalSample"
         typeof="owl:Class">
         <h5><a href="#SOSAStatisticalSample">sosa:StatisticalSample</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/StatisticalSample</p>
-        <p><strong>an OWL Class</strong></p>
-
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/StatisticalSample
+        </p>
+        <p>
+            <strong>an OWL Class</strong>
+        </p>
         <p class="note">
-            StatisticalSample added in 2024 update.
+            StatisticalSample added in 2025 update.
             This term is non-normative pending further implementation experience.
         </p>
         <p>
@@ -866,7 +901,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -874,10 +909,14 @@
     <section class="informative specterm sosa" id="SOSAfeatureSampledBy" about="sosa:featureSampledBy"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAfeatureSampledBy">sosa:featureSampledBy</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/featureSampledBy</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">featureSampledBy added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/featureSampledBy
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            featureSampledBy added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">feature sampled by</em> -
@@ -886,8 +925,9 @@
                 <a href="#SOSASampleCollection">SampleCollection</a> that is intended to be
                 representative of it - i.e. the end of a chain of hasSample relations.</span> <br>
         </p>
-        <p class="note">Some examples of relationships between samples and features of interest within chains are
-            illustrated in <a href="#sample-chains">Common Patterns</a>.</p>
+        <p class="note">
+            Some examples of relationships between samples and features of interest within chains are
+            illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
         <table>
             <tbody>
                 <tr>
@@ -920,7 +960,7 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -928,10 +968,14 @@
     <section class="informative specterm sosa" id="SOSAhasOriginalSample" about="sosa:hasOriginalSample"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAhasOriginalSample">sosa:hasOriginalSample</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOriginalSample</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">hasOriginalSample added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasOriginalSample
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            hasOriginalSample added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">has original sample</em> -
@@ -974,20 +1018,23 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAhasSample" about="sosa:hasSample" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAhasSample">sosa:hasSample</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSample</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSample
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">has sample</em> -
             <span property="skos:definition">Relation between a <a href="#SOSAFeatureOfInterest">FeatureOfInterest</a>
-                and
-                the <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> used to
+                and the <a href="#SOSASample">Sample</a> or <a href="#SOSASampleCollection">SampleCollection</a> used to
                 represent it.</span>
             <br>
         </p>
@@ -1029,7 +1076,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -1037,10 +1084,14 @@
     <section class="informative specterm sosa" id="SOSAhasSampledFeature" about="sosa:hasSampledFeature"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAhasSampledFeature">sosa:hasSampledFeature</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSampledFeature</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">hasSampledFeature added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSampledFeature
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            hasSampledFeature added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">has ultimate sampled feature</em> -
@@ -1050,8 +1101,9 @@
                 representative
                 of - i.e. the end of a chain of isSampleOf relations.</span>
         </p>
-        <p class="note">Some examples of relationships between samples and features of interest within chains are
-            illustrated in <a href="#sample-chains">Common Patterns</a>.</p>
+        <p class="note">
+            Some examples of relationships between samples and features of interest within chains are
+            illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
         <table>
             <tbody>
                 <tr>
@@ -1084,7 +1136,7 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -1092,10 +1144,14 @@
     <section class="informative specterm sosa" id="SOSAisOriginalSampleOf" about="sosa:isOriginalSampleOf"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAisOriginalSampleOf">sosa:isOriginalSampleOf</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isOriginalSampleOf</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">isOriginalSampleOf added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isOriginalSampleOf
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            isOriginalSampleOf added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">is original sample of</em> -
@@ -1103,8 +1159,9 @@
                 collected from the ultimate feature of interest to a downstream <a href="#SOSASample">Sample</a> or <a
                     href="#SOSASampleCollection">SampleCollection</a>.</span>
         </p>
-        <p class="note">Some examples of relationships between samples and features of interest within chains are
-            illustrated in <a href="#sample-chains">Common Patterns</a>.</p>
+        <p class="note">
+            Some examples of relationships between samples and features of interest within chains are
+            illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
         <table>
             <tbody>
                 <tr>
@@ -1138,7 +1195,7 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -1146,10 +1203,15 @@
     <section class="informative specterm sosa" id="SOSAisResultOfMadeBySampler" about="sosa:isResultOfMadeBySampler"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAisResultOfMadeBySampler">sosa:isResultOfMadeBySampler</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isResultOfMadeBySampler</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isResultOfMadeBySampler
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
 
-        <p class="note">isResultOfMadeBySampler added in 2024 update.
+        <p class="note">
+            isResultOfMadeBySampler added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">is a result of made by sampler</em> -
@@ -1196,8 +1258,8 @@
                 <tr>
                     <th>is Defined By</th>
                     <td>
-                        <span rel="rdfs:isDefinedBy"><a
-                                href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a></span>
+                        <span rel="rdfs:isDefinedBy">
+                            <a href="http://www.w3.org/ns/sosa/sampling/">http://www.w3.org/ns/sosa/sampling/</a></span>
                     </td>
                 </tr>
             </tbody>
@@ -1211,7 +1273,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -1219,15 +1281,19 @@
     <section class="informative specterm sosa" id="SOSAisResultOfUsedProcedure" about="sosa:isResultOfUsedProcedure"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAisResultOfUsedProcedure">sosa:isResultOfUsedProcedure</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isResultOfUsedProcedure</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">isResultOfUsedProcedure added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isResultOfUsedProcedure
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            isResultOfUsedProcedure added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">is a result of used procedure</em> -
-            <span property="skos:definition">Relation from a <a href="#SOSASample">Sample</a> or <a
-                    href="#SOSASampleCollection">SampleCollection</a> to the <a href="#SOSAProcedure">Procedure</a>
+            <span property="skos:definition">Relation from a <a href="#SOSASample">Sample</a> or
+                <a href="#SOSASampleCollection">SampleCollection</a> to the <a href="#SOSAProcedure">Procedure</a>
                 (plan) used to make it.</span> <br>
         </p>
         <table>
@@ -1285,16 +1351,19 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAisSampleOf" about="sosa:isSampleOf" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAisSampleOf">sosa:isSampleOf</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/isSampleOf</p>
-        <p><strong>an OWL Object Property</strong></p>
-
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/isSampleOf
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">is sample of</em> -
             <span property="skos:definition">Relation from a <a href="#SOSASample">Sample</a> or <a
@@ -1302,8 +1371,9 @@
                     href="#SOSAFeatureOfInterest">FeatureOfInterest</a> that it is intended to be
                 representative of.</span> <br>
         </p>
-        <p class="note">Some examples of relationships between samples and features of interest within chains are
-            illustrated in <a href="#sample-chains">Common Patterns</a>.</p>
+        <p class="note">
+            Some examples of relationships between samples and features of interest within chains are
+            illustrated in <a href="#ModelSampleChains">Sample chains</a>.</p>
         <table>
             <tbody>
                 <tr>
@@ -1344,15 +1414,19 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAmadeBySampler" about="sosa:madeBySampler" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAmadeBySampler">sosa:madeBySampler</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySampler</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySampler
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">made by sampler</em> -
             <span property="skos:definition">Relation linking an act of <a href="#SOSASampling">Sampling</a> to
@@ -1395,15 +1469,19 @@
             </tbody>
         </table>
         <div class="buttonpanel">
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
     <section class="specterm sosa" id="SOSAmadeSampling" about="sosa:madeSampling" typeof="owl:ObjectProperty">
         <h5><a href="#SOSAmadeSampling">sosa:madeSampling</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeSampling</p>
-        <p><strong>an OWL Object Property</strong></p>
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeSampling
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
         <p>
             <em property="rdfs:label">made sampling</em> -
             <span property="skos:definition">Relation between a <a href="#SOSASampler">Sampler</a> (sampling
@@ -1451,7 +1529,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement,this);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -1459,10 +1537,14 @@
     <section class="informative specterm sosa" id="SOSAmadeSamplingHasResult" about="sosa:madeSamplingHasResult"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAmadeSamplingHasResult">sosa:madeSamplingHasResult</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeSamplingHasResult</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">madeSamplingHasResult added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/madeSamplingHasResult
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            madeSamplingHasResult added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">made sampling has result</em> -
@@ -1529,7 +1611,7 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
@@ -1537,10 +1619,14 @@
     <section class="informative specterm sosa" id="SOSAusedForExecutionHasResult" about="sosa:usedForExecutionHasResult"
         typeof="owl:ObjectProperty">
         <h5><a href="#SOSAusedForExecutionHasResult">sosa:usedForExecutionHasResult</a></h5>
-        <p class="crossreference"><strong>IRI:</strong> http://www.w3.org/ns/sosa/usedForExecutionHasResult</p>
-        <p><strong>an OWL Object Property</strong></p>
-
-        <p class="note">usedForExecutionHasResult added in 2024 update.
+        <p class="crossreference">
+            <strong>IRI:</strong> http://www.w3.org/ns/sosa/usedForExecutionHasResult
+        </p>
+        <p>
+            <strong>an OWL Object Property</strong>
+        </p>
+        <p class="note">
+            usedForExecutionHasResult added in 2025 update.
             This term is non-normative, pending further implementation experience</p>
         <p>
             <em property="rdfs:label">used for execution has result</em> -
@@ -1604,10 +1690,9 @@
                         onclick="hide_ssn(true,this.parentElement.parentElement.parentElement.parentElement);return false;">Hide
                         additional SSN axioms</a>]</span>
             </span>
-            <span class="back">[<a href="#Sampling">Back to module overview</a>]</span>
+            <span class="back">[<a href="#Samplings-overview">Back to module overview</a>]</span>
             <span class="back">[<a href="#Overview">Back to top</a>]</span>
         </div>
     </section>
 
 </section>
-<!--  </section>  -->
