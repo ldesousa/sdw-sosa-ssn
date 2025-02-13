@@ -9,6 +9,7 @@
 @prefix system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://example.org/data/TH2-PLUS/> .
 
 sensor:IBS-TH2-Plus
   a owl:Class ;
